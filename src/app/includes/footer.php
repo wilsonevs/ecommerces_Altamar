@@ -50,8 +50,8 @@
             </a>
           </div>
           <div class="footer-center">
-            <a href=""><i class=' bx bxl-instagram-alt'></i></a>
-            <a href=""><i class='size-icon bx bxl-facebook-square'></i></a>
+            <a href="https://www.instagram.com/altamar.import/" target="_blank"><i class=' bx bxl-instagram-alt'></i></a>
+            <a href="https://www.facebook.com/altamarimportaciones/" target="_blank"><i class='size-icon bx bxl-facebook-square'></i></a>
         </div>
         </div>
       </div>

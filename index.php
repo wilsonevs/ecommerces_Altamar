@@ -576,7 +576,7 @@ Marcas
 
 <section class="section marcas">
   <div class="title">
-    <h2>Nuestras Marcas</h2>
+    <h2>Nuestros Aliados</h2>
     <span>Seleccione entre las marcas de productos premium y ahorre mucho dinero</span>
   </div>
 
@@ -584,27 +584,18 @@ Marcas
     <div class="swiper-container slider-3">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="src/public/img/brand1.png" alt="">
+          <img src="src/public/img/envia.png" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="src/public/img/brand2.png" alt="">
+          <img src="src/public/img/inter_rapidisimo.png" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="src/public/img/brand3.png" alt="">
+          <img src="src/public/img/servientrega.png" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="src/public/img/brand4.png" alt="">
+          <img src="src/public/img/pago_contra_entrega.png" alt="">
         </div>
-        <div class="swiper-slide">
-          <img src="src/public/img/brand5.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="src/public/img/brand6.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="src/public/img/brand7.png" alt="">
-        </div>
-
+     
       </div>
     </div>
   </div>

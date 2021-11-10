@@ -22,7 +22,7 @@
 
           <p>
             ¿Ya tienes una cuenta?
-            <a href="signup.html">Iniciar sesión</a>
+            <a href="login.php">Iniciar sesión</a>
           </p>
 
           <p>

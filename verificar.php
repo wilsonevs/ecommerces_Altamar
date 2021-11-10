@@ -27,6 +27,11 @@ FORMULARIO
 
             <h2>Detalle de facturación</h2>
             <h2></h2>
+            <select name="tipo_pago" id="tipo_pago" class="color_select">
+              <option value="-1" selected>Forma de pago</option>
+              <option value="ce">Contra entrega</option>
+              <option value="tb">Transferencia bancaria</option>
+            </select>
             <input type="text" name="nombre" id="nombre" required="required" class="form" placeholder="Nombre" />
             <input type="text" name="apellido" id="apellido" required="required" class="form" placeholder="Apellidos" />
             <select name="tipo_cedula" id="tipo_cedula" class="color_select">
@@ -41,12 +46,12 @@ FORMULARIO
             <input type="text" name="numero_documento" id="numero_documento" required="required" class="form" placeholder="Número de documento" />
             <input type="text" name="celular" id="celular" required="required" class="form" placeholder="Número Celular o Teléfono" />
             <select name="pais" id="pais" class="color_select">
-              <option value="-2" selected>País</option>
-              <option value="co">Colombia</option>
+              <option value="co" selected>Colombia</option>
+              <!-- <option value="-2" selected>País</option>
               <option value="ec">Ecuador</option>
               <option value="eu">Estados Unidos</option>
               <option value="pr">Peru</option>
-              <option value="vn">Venezuela</option>
+              <option value="vn">Venezuela</option> -->
             </select>
 
             <select name="departamento" id="departamento" class="color_select">
@@ -75,6 +80,7 @@ FORMULARIO
             <input type="text" name="barrio" id="barrio" required="required" class="form" placeholder="Barrio" />
 
             <input type="text" name="direccion" id="direccion" required="required" class="form" placeholder="Dirección" />
+            <br>
 
             <label>¿Enviar a la misma dirección? Sí <input type="checkbox" id="cbox1" value="first_checkbox"> </label><br>
             <h2>Dirección de entrega</h2>

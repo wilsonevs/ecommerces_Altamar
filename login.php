@@ -22,11 +22,11 @@
           </label>
 
           <p>
-            <a href="#">¿Olvidaste la contraseña?</a>.
+            <a href="cambio_clave.php">¿Olvidaste la contraseña?</a>.
           </p>
           <p>
             ¿Ya tienes una cuenta?
-            <a href="signup.html">Crea tu cuenta</a>
+            <a href="">Crea tu cuenta</a>
           </p>
 
           <div class="buttons">
