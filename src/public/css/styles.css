@@ -2100,6 +2100,9 @@ PERFIL
   /* border: 1.5px solid rgba(0, 0, 0, 0.075); */
 }
 
+.text_negro {
+  color: var(--color__negro) !important;
+}
 
 .perfil_form_uno{
   display: grid;

@@ -27,10 +27,10 @@ FORMULARIO
         <option value="nit">NIT</option>
         <option value="pass">Pasaporte</option>
       </select>
-      <input type="text" name="numero_documento" id="numero_documento" required="required" class="form" placeholder="Número de documento" />
-      <input type="text" name="nombre" id="nombre" required="required" class="form" placeholder="Nombre" />
-      <input type="text" name="apellido" id="apellido" required="required" class="form" placeholder="Apellidos" />
-      <input type="text" name="celular" id="celular" required="required" class="form" placeholder="Número Celular o Teléfono" />
+      <input type="text" name="numero_documento" id="numero_documento" required="required" class="form text_negro" placeholder="Número de documento" />
+      <input type="text" name="nombre" id="nombre" required="required" class="form text_negro" placeholder="Nombre" />
+      <input type="text" name="apellido" id="apellido" required="required" class="form text_negro" placeholder="Apellidos" />
+      <input type="text" name="celular" id="celular" required="required" class="form text_negro" placeholder="Número Celular o Teléfono" />
       <select name="pais" id="pais" class="color_select">
         <option value="-2" selected>País</option>
         <option value="co">Colombia</option>
@@ -62,9 +62,9 @@ FORMULARIO
         <option value="Bello">Sabaneta</option>
         <option value="Bello">Rionegro</option>
       </select>
-      <input type="text" name="barrio" id="barrio" required="required" class="form" placeholder="Barrio" />
-      <input type="text" name="direccion" id="direccion" required="required" class="form" placeholder="Dirección" />
-      <input type="text" name="direccion" id="direccion" required="required" class="form" placeholder="Correo Electrónico" />
+      <input type="text" name="barrio" id="barrio" required="required" class="form text_negro" placeholder="Barrio" />
+      <input type="text" name="direccion" id="direccion" required="required" class="form text_negro" placeholder="Dirección" />
+      <input type="text" name="direccion" id="direccion" required="required" class="form text_negro" placeholder="Correo Electrónico" />
     </div>
 
     <div class="buttons">

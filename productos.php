@@ -117,6 +117,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-1.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>
@@ -133,6 +134,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-2.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>
@@ -149,6 +151,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-3.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>
@@ -165,6 +168,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-4.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>
@@ -181,6 +185,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-5.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>
@@ -197,6 +202,7 @@
         <div class="product">
           <div class="img-container">
             <a href="productosDetalles.php"><img src="src/public/img/product-6.jpg" alt="" /></a>
+            <span class="discount">50%</span>
             <div class="addCart">
               <i class="fas fa-shopping-cart"></i>
             </div>

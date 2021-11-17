@@ -74,6 +74,7 @@
       <div class="product">
         <div class="img-container">
           <img src="src/public/img/product-1.jpg" alt="" />
+          <span class="discount">50%</span>
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -89,6 +90,7 @@
       <div class="product">
         <div class="img-container">
           <img src="src/public/img/product-2.jpg" alt="" />
+          <span class="discount">50%</span>
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -104,6 +106,7 @@
       <div class="product">
         <div class="img-container">
           <img src="src/public/img/product-3.jpg" alt="" />
+          <span class="discount">50%</span>
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -119,6 +122,7 @@
       <div class="product">
         <div class="img-container">
           <img src="src/public/img/product-4.jpg" alt="" />
+          <span class="discount">50%</span>
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
