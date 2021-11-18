@@ -82,7 +82,6 @@ FORMULARIO
             <td><b>$</b>300</td>
           </tr>
         </table>
-        <a href="pago_realizado.php" class="checkout btn">Ir a pagar</a>
       </div>
     </div>
   </div>
