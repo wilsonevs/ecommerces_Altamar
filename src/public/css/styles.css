@@ -2158,12 +2158,19 @@ PERFIL
 
 @media (max-width: 768px) {
   .perfil {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 2rem;
   }
 
 }
 
+@media (max-width: 551px) {
+  .perfil {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+
+}
 
 /* 
 =================
@@ -2314,6 +2321,68 @@ input[type="range"]:active::-webkit-slider-thumb{
     right: 0;
 }
 
+
+
+/* 
+=================
+CONTACTANOS
+================= 
+*/
+
+.contactanos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5em;
+  grid-template-rows: repeat(45px, 45px);
+  /* border: 1.5px solid rgba(0, 0, 0, 0.075); */
+}
+
+.contactanos__izq {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1.5em;
+}
+
+.contactanos__der {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1.5em;
+}
+
+@media (max-width: 998px) {
+  .contactanos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contactanos__izq {
+    margin-bottom: 25px;
+  }
+
+  .contactanos__der {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactanos {
+    grid-template-columns: 1fr; 
+  }
+
+  .contactanos__izq {
+    margin-bottom: 25px;
+  }
+}
+
+
+@media (max-width: 551px) {
+  .contactanos {
+    grid-template-columns: 1fr;
+  }
+
+  .contactanos__izq {
+    margin-bottom: 25px;
+  }
+}
 
 /* 
 =================

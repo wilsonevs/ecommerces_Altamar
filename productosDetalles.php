@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="product">
+      <!-- <div class="product">
         <div class="img-container">
           <img src="src/public/img/product-2.jpg" alt="" />
           <span class="discount">50%</span>
@@ -133,7 +133,9 @@
             <span>$150</span>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
     </div>
   </section>
 
