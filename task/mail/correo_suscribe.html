@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+
+<table align="center" class="container">
+    <tbody>
+        <tr>
+            <td>
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="columns first last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="text-center xgracias">
+                                                Tenemos un nuevo suscriptor en {{host}}
+                                            </p>
+                                            <p class="text-center xnombre">
+                                                {{attrs.correo_electronico.data[0]}}
+                                            </p>
+                                        </th>
+                                        <th class="expander"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="spacer">
+    <tbody>
+        <tr>
+            <td height="50px" style="font-size:50px;line-height:50px;">&#xA0;</td>
+        </tr>
+    </tbody>
+</table>
+{% include 'footer.html' %}

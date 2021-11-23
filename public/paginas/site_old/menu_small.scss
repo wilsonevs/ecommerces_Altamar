@@ -1,0 +1,69 @@
+.menu_small {
+
+	.autenticacion {
+		background-color: $blanco;
+		padding: 16px;
+		a {
+			color: $gris;
+			font-weight: bold;
+			font-size: 14px;
+		}
+	}
+	.menu {
+		padding-top: 16px !important;
+		li{
+			a{
+				color: #FFFFFF !important;
+			}
+			a:hover, a:focus{
+				color: #FFFFFF !important;
+				font-weight: bold;
+			}
+
+			.carrito {
+				margin-right: 10px;
+				margin-top: -6px;
+			}
+		}
+		.submenu {
+			padding-top: 0px !important;
+		}
+
+		.is-accordion-submenu-parent {
+			a::after {
+				border: 0;
+				content: "";
+				top: 16px;
+				right: 30px;
+			}
+		}
+
+		.is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+			top: 31px;
+			right: 14px;
+		}
+
+	}
+	.is-accordion-submenu[data-submenu]{
+		padding-left: 1rem;
+		padding-right: 1rem;
+		background-color: $gris;
+		.is-accordion-submenu[data-submenu] {
+			padding: 1rem !important;
+			margin-left: -1rem;
+			margin-right: -1rem;
+			background-color: $blanco;
+			a{
+				color: $negro !important;
+				&::after{
+					content: '';
+				}
+				&:hover{
+					font-weight: bold;
+				}
+			}
+
+		}
+
+	}
+}

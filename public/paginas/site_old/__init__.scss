@@ -1,0 +1,469 @@
+/* FONTS */
+$ruta: '/tiendaconvariacion/public/paginas';
+@font-face {
+	font-family: 'HelveticaWorld-Regular';
+	src: url($ruta+"/fuentes/HelveticaWorld-Regular.ttf");
+}
+@font-face {
+	font-family: 'HelveticaWorld-Bold';
+	src: url($ruta+"/fuentes/HelveticaWorld-Bold.ttf");
+}
+
+//tamaño de letra de paginas
+$font-default-size: 16px;
+$font-regular: 'Helvetica';
+$font-bold: 'HelveticaWorld-Bold';
+
+
+* {
+	font-family: $font-regular;
+	font-size: $font-default-size;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+*:focus{
+	outline: inherit !important;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	position: relative;
+}
+
+/* PAGINA */
+
+.off-canvas-wrapper{
+	height: 100%;
+	overflow-y: scroll;
+	.off-canvas-wrapper-inner{
+		height: 100%;
+		.off-canvas.position-left{
+			overflow-y: scroll;
+			max-height: none;
+			background-color: rgba(0,0,0,1);
+		}
+		.off-canvas-content{
+			padding-bottom: 350px; //Padding de abajo dependiendo la altura del footer para large
+			position: relative;
+			min-height: 100%;
+			.footer{
+				position: absolute;
+				bottom: 0;
+			}
+			@media screen and (max-width: 1023px){
+				padding-bottom: 420px; //Padding de abajo dependiendo la altura del footer para medium
+			}
+			@media screen and (max-width: 639px){
+				padding-bottom: 630px; //Padding de abajo dependiendo la altura del footer para small
+			}
+			@media screen and (max-width: 450px){
+				padding-bottom: 700px; //Padding de abajo dependiendo la altura del footer para small
+			}
+		}
+	}
+}
+
+.row {
+	width: 100%;
+	max-width: 1024px;
+	.row {
+		margin: 0px;
+	}
+}
+
+
+/* Colores */
+
+$blanco: #FFFFFF;
+$negro: #8C8C8C;
+$rojo: #8C8C8C;
+$gris: #586268;
+$gris-oscuro: #4A4A4A;
+$verde: #8C8C8C;
+$primary: #756436;
+
+
+.primary {
+	color: $primary;
+}
+
+.bg-primary {
+	background-color: $primary;
+}
+
+.blanco {
+	color: $blanco;
+}
+
+.negro {
+	color: $negro;
+}
+
+.rojo {
+	color: #ba0000;
+}
+
+.bg-rojo {
+	background-color: #ba0000 !important;
+}
+
+.gris {
+	color: $gris;
+}
+
+.gris-oscuro {
+	color: $gris-oscuro;
+}
+
+.verde {
+	color: $verde;
+}
+
+/* Fuentes */
+
+.regular {
+	font-family: $font-regular;
+}
+
+.bold {
+	font-family: $font-bold;
+}
+
+.font-6 {
+	font-size: 0.6rem;
+}
+
+.font-7 {
+	font-size: 0.7rem;
+}
+
+.font-8 {
+	font-size: 0.8rem;
+}
+
+.font-9 {
+	font-size: 0.9rem;
+}
+
+.font-10 {
+	font-size: 1rem;
+}
+
+.font-11 {
+	font-size: 1.1rem;
+}
+
+.font-12 {
+	font-size: 1.2rem;
+}
+
+.font-13 {
+	font-size: 1.3rem;
+}
+
+.font-14 {
+	font-size: 1.4rem;
+}
+
+.font-15 {
+	font-size: 1.5rem;
+}
+
+.font-16 {
+	font-size: 1.6rem;
+}
+
+.font-17 {
+	font-size: 1.7rem;
+}
+
+.font-18 {
+	font-size: 1.8rem;
+}
+
+
+// Text styles
+.line-through {
+	text-decoration: line-through;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/* Position */
+
+.relative {
+	position: relative;
+}
+
+/* hover */
+.no-hover-blanco{
+	&:hover {
+		color: $blanco;
+	}
+	&:focus {
+		color: $blanco;
+	}
+}
+
+.no-hover-negro{
+	&:hover {
+		color: $negro;
+	}
+	&:focus {
+		color: $negro;
+	}
+}
+
+
+.no-hover-rojo{
+	&:hover {
+		color: $rojo;
+	}
+	&:focus {
+		color: $rojo;
+	}
+}
+
+
+/* Flecha ir arriba */
+
+.icon-ir-arriba{
+	position: fixed;
+	right: 32px;
+	bottom: 20px;
+	z-index: 3;
+}
+
+/* padding */
+
+.padding-left-none {
+	padding-left: 0 !important;
+}
+
+.padding-right-none {
+	padding-right: 0;
+}
+
+.padding-top-1 {
+	padding-top: 1rem;
+}
+
+.padding-bottom-1{
+	padding-bottom: 1rem;
+}
+
+.padding-none {
+	padding: 0;
+}
+
+
+/* margin */
+
+.margin-top-1{
+	margin-top: 1rem;
+}
+
+.margin-top-2{
+	margin-top: 2rem;
+}
+
+.margin-top-3{
+	margin-top: 3rem;
+}
+
+.margin-top-4{
+	margin-top: 4rem;
+}
+
+.margin-top-5{
+	margin-top: 5rem;
+}
+
+.margin-bottom-0{
+	margin-bottom: 0px;
+}
+
+.margin-bottom-1{
+	margin-bottom: 1rem;
+}
+
+.margin-bottom-2{
+	margin-bottom: 2rem;
+}
+
+.margin-bottom-3{
+	margin-bottom: 3rem;
+}
+
+.margin-bottom-4{
+	margin-bottom: 4rem;
+}
+
+.margin-bottom-5{
+	margin-bottom: 5rem;
+}
+
+
+.margin-right-0 {
+	margin-right: 0 !important;
+}
+
+
+.margin-none {
+	margin: 0;
+}
+
+
+.pagination{
+	li{
+		display: inline-block !important;
+		margin-left: 3px;
+		margin-right: 3px;
+
+	}
+	li, .current{
+		background-color: transparent;
+		border: 1px solid $verde;
+		padding: 1px;
+		border-radius: 25px;
+		a{
+			font-family: 'Bariol-Regular';
+			color: $verde;
+			padding: 1px 0.6rem;
+		}
+		&:hover{
+			background-color: $verde;
+			a{
+				color: #FFFFFF;
+				background-color: transparent;
+			}
+		}
+	}
+	.current{
+		border: 1px solid $verde;
+		background-color: $verde;
+		a{
+			color: #FFFFFF;
+		}
+	}
+	.arrow{
+
+	}
+}
+
+.pagination a:hover{
+	background-color: $verde;
+	color: #FFFFFF;
+}
+
+
+.overflow-none {
+	overflow: hidden;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.hover-underline:hover {
+	text-decoration: underline;
+}
+
+.modo-pago {
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: 8px;
+	border-bottom: 1px solid #F2F2F2;
+	background-color: $primary;
+	a {
+			color: $blanco;
+	}
+
+	img {
+		width: 24px;
+		height: 24px;
+		margin-top: -5px;
+		margin-right: 16px;
+	}
+}
+
+@media screen and (max-width: 639px){
+
+	// PADDING SMALL
+	.padding-right-small-none {
+		padding-right: 0;
+	}
+	.padding-left-small-none {
+		padding-left: 0;
+	}
+	.padding-small-none {
+		padding: 0;
+	}
+
+	// MARGIN SMALL
+	.margin-top-small-1 {
+		margin-top: 1rem;
+	}
+	.margin-bottom-small-1 {
+		margin-bottom: 1rem;
+	}
+
+	.margin-small-none {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.text-medium-right {
+		text-align: right;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.text-right-large {
+		text-align: right;
+	}
+}
+
+// OCULTAR Y MOSTRAR COSAS
+.hiden {
+	display: none;
+}
+
+
+//color personalizado
+.footer .suscribirse .input-group .input-group-button .button {
+	background-color: $primary !important;
+}
+
+//letra en mayuscula
+.upper{
+	text-transform: uppercase;
+}
+
+@import 'idioma';
+@import 'part_moneda';
+@import 'header';
+@import 'menu_small';
+@import 'menu';
+@import 'menu_interno';
+@import 'slider';
+@import 'carro_lateral';
+@import 'item_producto';
+@import 'footer';
+@import 'filtros_catalogo';
+// @import 'modal_registro';
+@import 'modals';
+@import 'loader';
+@import 'part_contraentrega';
+@import 'part_consignacion';

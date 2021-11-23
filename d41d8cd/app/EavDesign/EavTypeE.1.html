@@ -1,0 +1,122 @@
+<ion-view view-title="Edición de Tipo" class="EavTypeE">
+	<ion-content>
+
+
+		<!--ion-list show-delete="data.showDelete" on-delete="onItemDelete(item)" can-reorder="true" show-reorder="true" option-buttons="[]">
+			<ion-item ng-repeat="item in items" item="item">
+				Item {{ item.id }}
+			</ion-item>
+		</ion-list-->
+
+
+
+		<div class="x-card">
+			<div class="x-row">
+				<div class="x-col small-12 medium-6 large-6">
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.type_name">
+					</label>
+
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Atributos para Slug</span>
+						<input type="text" placeholder="" ng-model="dr.slug_attrs">
+					</label>
+
+					<label class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</label>
+				</div>
+				<div class="x-col small-12 medium-6 large-6">
+					<div class="x-row">
+						<div class="x-col large-8">
+							<h2>Atributos</h2>
+						</div>
+						<div class="x-col large-4 text-right">
+							<a href="" class="icon ion-plus-circled" style="font-size:24px;"></a>
+							<!--a href="" class="icon ion-funnel" style="font-size:24px;" ng-click="d.attr_sort=!d.attr_sort"></a-->
+							Ordenar:
+
+							<label class="toggle toggle-assertive">
+								<input type="checkbox" ng-model="d.attr_sort">
+								<div class="track">
+									<div class="handle"></div>
+								</div>
+							</label>
+
+						</div>
+					</div>
+					<br/>
+
+					<div class="item-input x-attr-filter">
+						<label class="item-input-wrapper">
+							<i class="icon ion-search placeholder-icon"></i>
+							<input type="search" placeholder="Filtrar Atributos" ng-model="d.attr_filter" ng-change="attrFilter(true,'search')" />
+						</label>
+						<i class="icon ion-backspace-outline x-clear" ng-click="d.attr_filter='';"></i>
+					</div>
+
+
+					<div class="x-row">
+						<ion-list class="x-atributos" show-reorder="d.attr_sort">
+							<ion-item ng-repeat="r in dr.attrs | filter:d.attr_filter" class=" item-icon-left item-icon-top _item-thumbnail-left" ng-click="attrEdit(r)">
+								<i class="icon ion-minus-round"></i>
+								<a>{{r.attr_label}}</a>
+								<p>{{r.attr_name}}</p>
+								<p>{{r.attr_type}}</p>
+
+								<ion-option-button class="button-positive" ng-click="share(item)">
+									Share
+								</ion-option-button>
+								<ion-option-button class="button-info" ng-click="edit(item)">
+									Edit
+								</ion-option-button>
+								<ion-delete-button class="ion-minus-circled" ng-click="items.splice($index, 1)">
+								</ion-delete-button>
+								<ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)">
+								</ion-reorder-button>
+
+							</ion-item>
+						</ion-list>
+
+					</div>
+
+					<br/>
+
+					<div class="x-row">
+						<div class="x-col large-8">
+						</div>
+						<div class="x-col large-4 text-right">
+							<a href="" class="icon ion-plus-circled" style="font-size:24px;"></a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<br/>
+
+			<div class="x-row">
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-positive button-nowrap icon-left ion-record" ng-click="saveAndBack()">
+						Guardar y Volver
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-positive button-nowrap icon-left ion-record" ng-click="save()">
+						Guardar
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-positive button-nowrap icon-left ion-arrow-return-left" ng-click="back()">
+						Regresar
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	</ion-content>
+</ion-view>

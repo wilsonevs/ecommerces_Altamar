@@ -1,0 +1,208 @@
+@import '__init__';
+
+.carro{
+	.content{
+		padding-top: 2rem;
+
+		hr {
+			margin-top: 5px;
+			margin-bottom: 1rem;
+			border-color: $primary;
+		}
+
+		.x-text {
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+			color: $negro;
+		}
+
+		.items{
+			margin-top: 25px;
+			padding-right: 0;
+			padding-left: 0;
+
+			h5{
+				color:$negro;
+			}
+
+			.descripcion{
+
+				.titulo-articulo{
+					margin-bottom: 1rem;
+					@media screen and (max-width: 640px){
+						margin-top: 1rem;
+						margin-bottom: 0px;
+					}
+					@media screen and (max-width: 1023px){
+						.font-14 {
+							font-size: 15px;
+						}
+					}
+
+
+				}
+				.referencia{
+
+					.referencia-contenido{
+						@media screen and (max-width: 640px){
+							text-align: left;
+							margin-left: 0px;
+						}
+					}
+				}
+				.descripcion-articulo{
+					margin-bottom: 20px;
+					p{
+						margin-top: 5px;
+					}
+				}
+
+			}
+
+			.categoria{
+
+				.tag{
+					margin-bottom: 20px;
+					text-align: center;
+
+					.input {
+						margin-top: 5px;
+						margin-bottom: 5px;
+						input {
+							max-width: 50px;
+							min-width: 50px;
+							margin-left: auto;
+							margin-right: auto;
+							text-align: center;
+							position: relative;
+							top: -13px;
+						}
+						.botones {
+							display: inline-block;
+						}
+					}
+					a {
+						color: $negro;
+						padding-top: 5px;
+						text-decoration: underline;
+						font-size: 16px;
+					}
+
+					.mensaje {
+						font-size: 0.8rem;
+						line-height: 0.8rem;
+					}
+
+					@media screen and (max-width: 640px){
+						text-align: right;
+						margin-left: 0px;
+						margin-bottom: 0px;
+						.label {
+							padding: 0px;
+						}
+					}
+				}
+
+				@media screen and (max-width: 640px){
+					margin-top: 1rem;
+				}
+			}
+
+			.precio-articulo-unitario{
+				@media screen and (max-width: 640px){
+					text-align: left;
+				}
+			}
+
+
+			.inventario-articulo{
+				font-size: 14px;
+				margin-bottom: 20px;
+				span{
+					font-size: 16px;
+				}
+			}
+			
+			.button{
+				width: 70px !important;
+				padding: 7px !important;
+			}
+
+			@media screen and (max-width: 640px){
+				border-bottom: 1px solid #F2F2F2;
+			}
+
+
+		}
+		.ubicacion-geografica{
+			padding-left: 8px;
+			padding-right: 8px;
+			.location{
+				color: #000000;
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+		}
+		.valores{
+			.label-subtotal{
+				font-size: 20px;
+			}
+			.label-total{
+				font-size: 20px;
+			}
+			.content-subtotal{
+				font-size: 18px;
+			}
+			.content-total{
+				font-size: 20px;
+			}
+			// .label-impuesto{
+			// 	font-size: 20px;
+			// }
+
+			@media screen and (max-width: 640px){
+				.label-subtotal{
+					font-size: 1.5rem;
+				}
+				.label-total{
+					font-size: 1.7rem;
+				}
+				.content-subtotal{
+					font-size: 1.5rem;
+				}
+				.content-total{
+					font-size: 1.7rem;
+				}
+				// .label-impuesto{
+				// 	font-size: 14px;
+				// }
+			}
+
+		}
+
+		.continuar-comprando{
+			margin-top: 2rem;
+
+			.small-centered{
+				@media screen and (max-width: 640px){
+					text-align: center!important;
+				}
+			}
+
+
+		}
+
+		.button{
+			background: $primary;
+			height: 34px;
+			padding-top: 6px;
+			border-radius: 0px;
+			width: 215px;
+			font-size: 18px;
+			border-radius: 4px;
+			&:hover{
+				background: $primary;
+			}
+		}
+	}
+}

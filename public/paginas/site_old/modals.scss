@@ -1,0 +1,37 @@
+.reveal {
+	background-color: $blanco;
+
+	.title {
+		color: $gris;
+		text-align: center;
+	}
+
+	.message {
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	.btn {
+		text-align: center;
+		.button{
+			padding: 0.85em 7em;
+			border-radius: 4px;
+			margin-bottom: 0;
+			background: $primary;
+			color: $blanco;
+			&:hover{
+				background: $primary;
+			}
+		}
+
+	}
+
+	@media screen and (max-width: 39.9375em){
+		position: relative;
+		width: 315px;
+		margin: auto;
+		height: 30vh;
+    min-height: 30vh;
+		border-radius: 5px;
+	}
+}

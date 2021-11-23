@@ -1,0 +1,81 @@
+@import '__init__';
+
+.registro{
+	.content{
+
+		.centro {
+			margin-top: 2rem;
+			margin-bottom: 5rem;
+
+			hr {
+				margin-top: 5px;
+				margin-bottom: 1rem;
+				border-color: $primary;
+			}
+
+			.registro {
+				margin: auto;
+
+				.logo {
+					margin-bottom: 2rem;
+				}
+
+				form {
+
+					label{
+						text-align: left;
+					}
+
+					.submit {
+						margin-top: 16px;
+						margin-bottom: 16px;
+						width: 50%;
+						border-radius: 4px;
+						background-color: $primary;
+						color: $blanco;
+						font-weight: bold;
+						font-size: 1rem;
+						padding: 0.7em 1em;
+					}
+
+					.inicio{
+						float: left;
+					}
+
+					.text-politicas {
+						margin-bottom: 1rem;
+						border: 1px solid rgb(91, 91, 91);
+						padding: 20px;
+						max-height: 150px;
+						min-height: 150px;
+						overflow-y: scroll;
+					}
+
+					.recuperar {
+						float: right;
+					}
+
+					.boton-centro {
+						float: none;
+					}
+
+					@media screen and (max-width: 399px) {
+						.inicio {
+							float: none;
+							margin-bottom: 16px;
+						}
+
+						.recuperar {
+							float: none;
+						}
+
+						.submit {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

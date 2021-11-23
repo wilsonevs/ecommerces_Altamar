@@ -1,0 +1,142 @@
+<ion-view view-title="crm" class="EavItemL">
+
+	<ion-nav-buttons side="right">
+
+
+		<button class="button button-icon button-clear _ion-arrow-move" ng-click="d.select = !d.select" title="Mostrar casillas de selección">
+			<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+		</button>
+		&nbsp;
+		<button class="button button-icon button-clear _ion-arrow-move" ng-click="d.reorder = !d.reorder">
+			<i class="fa fa-sort" aria-hidden="true"></i>
+		</button>
+		&nbsp;
+
+		<button class="button button-icon button-clear ion-refresh" ng-click="aplicarFiltros(true,'refresh');"></button>
+		<button class="button button-icon button-clear ion-plus-round" ng-click="nuevo();"></button>
+	</ion-nav-buttons>
+
+
+	<div class="bar bar-subheader item-input-inset x-searchbar">
+		<label class="item-input-wrapper">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="Buscar" ng-model="dr.filter" ng-change="aplicarFiltros(true,'search')" />
+		</label>
+		<i class="icon ion-backspace-outline x-clear" ng-click="dr.filter=''; aplicarFiltros(true,'search');"></i>
+	</div>
+
+
+	<ion-content class="has-header" on-scroll="monitorScrollPosition()">
+
+		<br/>
+		<br/>
+		<br/>
+		<ion-refresher on-refresh="aplicarFiltros(true,'pull')" pulling-text="Refrescar" refreshing-text="Refrescando!" refreshing-icon="ion-loading-c" ng-if="!d.reorder">
+		</ion-refresher>
+
+		<div class="x-row" ng-show="page.rows.length">
+			<div class="x-col large-12 text-right">
+				<p>Registros: {{page.record_count}}</p>
+			</div>
+		</div>
+
+
+		<ion-list show-reorder="d.reorder" can-swipe="listCanSwipe" show-delete="false">
+			<ion-item ng-repeat="r in page.rows" class="item-thumbnail-left" ng-click="editItem(r)">
+
+				<img src="{{r.image}}" alt="" class="x-radius-4px">
+
+				<label class="checkbox" style="position:absolute;top:4px;left:4px;background-color:#fff;box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);" ng-show="d.select" ng-click="$event.stopPropagation()">
+					<input type="checkbox" ng-model="r.selected">
+				</label>
+
+				<div class="x-row">
+					<div class="x-col large-10">
+						<h2 ng-bind-html="r.title"></h2>
+						<p ng-bind-html="r.category_path"></p>
+						<p ng-bind-html="r.description"></p>
+					</div>
+					<div class="x-col large-2 text-right">
+						d: {{r.item_id}}
+					</div>
+				</div>
+
+				<ion-delete-button class="ion-minus-circled" ng-click="removeItem(r,$index);">
+				</ion-delete-button>
+				<ion-reorder-button class="ion-navicon" on-reorder="moveItem(r, $fromIndex, $toIndex)">
+				</ion-reorder-button>
+
+			</ion-item>
+		</ion-list>
+
+		<!--div class="list list-icons">
+
+			<a ng-repeat="r in page.rows" class="item item-thumbnail-left item-icon-right" ng-click="editar(r)">
+				<img src="http://placehold.it/48x48" alt=""> {{r.title}}
+				<p class="float-right">Id: {{r.item_id}}</p>
+				<p ng-bind-html="r.description"></p>
+
+				<a class="" ng-if="d.reorder" style="cursor:move;">
+					<i class="icon ion-drag" style="font-size:20px;"></i>
+				</a>
+
+			</a>
+		</div-->
+
+		<div ng-if="page.last && page.rows.length==0" class="text-center">
+			No se encontraron datos
+		</div>
+
+		<ion-infinite-scroll ng-if="!page.last" on-infinite="aplicarFiltros(false,'scroll')" class="infinite-scroll">
+		</ion-infinite-scroll>
+
+	</ion-content>
+
+	<style>
+		.x-floating-action {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			padding: 4px;
+			text-align: center;
+			border: 0px solid red;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: 1000;
+			height: 40px;
+		}
+
+		.x-button-scroll-top {
+			width: 56px;
+			height: 48px;
+			left: 100%;
+			margin-left: -56px;
+			z-index: 1001;
+		}
+
+		.x-button-scroll-top i {
+			font-size: 48px;
+			color: white;
+		}
+	</style>
+
+	<div class="x-floating-action x-button-scroll-top x-animate-slideup" ng-show="d.stt" ng-click="scrollToTop()">
+		<a class=""><i class="ion-ios-arrow-up"></i></a>
+	</div>
+
+	<div class="x-floating-action x-animate-slideup" ng-show="d.select">
+		<button class="button button-small button-light icon-left ion-android-checkbox-outline" ng-click="selectAll()">
+			Todos
+		</button>
+		<button class="button button-small button-light icon-left ion-android-checkbox-outline-blank" ng-click="deselectAll()">
+			Ninguno
+		</button>
+		<button class="button button-small button-assertive icon-left ion-trash-a" ng-click="deleteItems()">
+			Eliminar
+		</button>
+		<!--button class="button button-small button-light icon-left ion-ios-box" ng-click="archiveItems()">
+			Archivar
+		</button-->
+	</div>
+
+</ion-view>

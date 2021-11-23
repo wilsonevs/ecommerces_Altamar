@@ -1,0 +1,119 @@
+.header {
+    position: relative;
+    .content-gris{
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      background: white;
+
+        .pd-top7{
+            padding-top: 7px;
+        }
+
+        .pd-bot7{
+            padding-bottom: 7px;
+        }
+    }
+    .content-negro{
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: $primary;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        .logo {
+            height: 50px;
+
+            padding-top: 10px;
+            a {
+              img{
+                margin-top: -10px;
+              }
+            }
+        }
+
+        .icon-menu {
+            position: absolute;
+            // left: 16px;
+            top: 15px;
+        }
+
+        .buscador {
+            position: relative;
+            padding-top: 7px;
+            input {
+                margin-bottom: 0;
+                padding-right: 50px;
+                box-shadow: 0;
+                border: 0;
+                &:focus {
+                    box-shadow: 0;
+                    border: 0;
+
+                }
+            }
+            .icon-search {
+                position: absolute;
+                right: 0px;
+                top: 7px;
+                background-color: rgba(7,7,7,0.2);
+                padding: 7px 10px;
+                border-radius: 3px;
+            }
+        }
+
+        .menu-aut-car {
+            padding-top: 14px;
+
+            .inicio-sesion {
+                // -webkit-transition: margin-right 1s; /* Safari */
+                // transition: margin-right 1s;
+            }
+
+            .margin-inicio-sesion {
+                // @media screen and (min-width: 1024px){
+                //     margin-right: 280px;
+                // }
+            }
+        }
+
+
+        .carro-small {
+            position: absolute;
+            right: 16px;
+            top: 20px;
+        }
+
+        .content-carro {
+            position: relative;
+            display: inline-block;
+            padding-right: 11px;
+
+            .num-items {
+                position: absolute;
+                right: 2px;
+                top: -4px;
+                width: 20px;
+                height: 20px;
+                background-color: #728400;
+                border-radius: 30px;
+                text-align: center;
+                padding-top: 2px;
+                font-size: 11px;
+                color: $blanco;
+            }
+        }
+
+        @media screen and (max-width: 1023px){
+            .logo {
+                padding-left: 50px;
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 639px){
+            .logo {
+                padding-right: 50px;
+            }
+        }
+    }
+}

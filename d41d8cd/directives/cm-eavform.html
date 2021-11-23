@@ -1,0 +1,92 @@
+
+<div class="x-row">
+	<div ng-repeat="fld in st.attrs" class="x-col large-{{fld.attr_ewidth}} medium-12 small-12" ng-hide="fld.hidden">
+
+
+		<div class="item item-input item-stacked-label"
+			ng-class="{
+				'item-select': fld.attr_type=='selectboxxxx',
+				'item-stacked-label': fld.attr_type!='selectboxxxx'
+			}"
+		>
+			<span class="input-label">{{fld.attr_label}}</span>
+
+			<input
+				ng-if="fld.attr_type=='textfield'"
+				type="text"
+				placeholder=""
+				ng-model="fld.attr_value"
+				ng-readonly="fld.readonly"
+			/>
+
+			<textarea
+				ng-if="fld.attr_type=='textarea'"
+				ng-model="fld.attr_value"
+				ng-readonly="fld.readonly"
+				style="min-height:200px;"
+			></textarea>
+
+			<textarea
+				ng-if="fld.attr_type=='richeditor'"
+				ng-model="fld.attr_value"
+				ng-readonly="fld.readonly"
+				ui-tinymce="tinymce_options"
+			></textarea>
+
+			<input
+				type="date"
+				placeholder=""
+				ng-model="fld.attr_value"
+				ng-if="fld.attr_type=='datefield'"
+				ng-readonly="fld.readonly"
+			/>
+
+			<!--select
+				ng-if="fld.attr_type=='selectbox' && fld.ds_multiple==0"
+				ng-model="fld.attr_value"
+				ng-options="r.label for r in fld.ds_options track by r.data"
+				ng-readonly="fld.readonly"
+			></select-->
+
+			<cm-tokenfield
+				ng-if="fld.attr_type=='selectbox'"
+				ng-model="fld.attr_value"
+				multiple="fld.ds_multiple"
+				placeholder="Seleccione"
+				items-method="fld.acQuery(query)"
+				items-load="true"
+				ng-readonly="fld.readonly"
+				add-method="fld.addItem()"
+			></cm-tokenfield>
+
+
+			<cm-tokenfield
+				ng-if="fld.attr_type=='tokenfield'"
+				ng-model="fld.attr_value"
+				multiple="fld.ds_multiple"
+				placeholder="Seleccione"
+				items-method="fld.acQuery(query)"
+				items-load="true"
+				ng-readonly="fld.readonly"
+				add-method="fld.addItem()"
+
+			></cm-tokenfield>
+
+
+			<cm-imagefield
+				ng-if="fld.attr_type=='imagefield'"
+				ng-model="fld.attr_value"
+				multiple="fld.ds_multiple"
+				placeholder="Seleccione"
+			></cm-imagefield>
+
+			<cm-filefield
+				ng-if="fld.attr_type=='filefield'"
+				ng-model="fld.attr_value"
+				multiple="fld.ds_multiple"
+				placeholder="Seleccione"
+			></cm-filefield>
+
+		</div>
+	</div>
+</div>

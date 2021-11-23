@@ -1,0 +1,177 @@
+<ion-view view-title="crm" class="Tienda_PedidosE">
+	<ion-content>
+
+		<div class="x-row">
+			<div class="x-col large-8">
+				<div class="x-card encabezado">
+					<div class="x-row">
+						<div class="x-col large-4 medium-4 small-12" style="font-size: 12px;">
+							<label>Fecha Pedido</label>
+							<br/> {{d.enc.fechahora}}
+						</div>
+						<div class="x-col large-3 medium-4 small-6" style="font-size: 12px;">
+							<label>Fecha Pago</label>
+							<br/> {{d.enc.fechahora_pago}}
+						</div>
+						<div class="x-col large-5 medium-4 small-6 " style="font-size: 12px;">
+							<label>Forma de Pago</label>
+							<br/> {{d.enc.nombre_forma_pago}}
+						</div>
+					</div>
+					<div class="x-row">
+						<div class="x-col large-4 medium-4 small-12" style="font-size: 12px;">
+							<label>Total</label>
+							<br/> {{d.enc.total}}
+						</div>
+						<div class="x-col large-3 medium-4 small-6" style="font-size: 12px;">
+								<label>Total Usd</label>
+							<br/> {{d.enc.total_usd}}
+						</div>
+						<div class="x-col large-5 medium-4 small-6" style="font-size: 12px;">
+							<label>Total Unidades</label>
+							<br/> {{d.enc.total_unidades}}
+						</div>
+					</div>
+
+					<br/>
+					<div class="x-row">
+						<div class="x-col large-12 medium-12 small-12">
+							<div class="" style="padding-left: 5px;">
+								<span class="input-label">Estado</span>
+								<input type="radio" id="reserva" ng-model="dr.estado" name="estado" value="reserva" checked>
+								<label for="reserva">Reserva</label><br>
+								<input type="radio" id="pagado" ng-model="dr.estado" name="estado" value="pagado">
+								<label for="pagado">Pagado</label><br>
+								<input type="radio" id="anulado" ng-model="dr.estado" name="estado" value="anulado">
+								<label for="anulado">Anulado</label><br>
+							</div>
+						</div>
+						<div class="x-col large-12 medium-12 small-12">
+							<div class="item item-input item-stacked-label" style="padding-left: 5px;">
+								<span class="input-label">Notas</span>
+								<textarea ng-model="dr.notas"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<br/>
+					<div class="x-row">
+						<div class="x-col large-12">
+							<button class="button button-positive button-nowrap icon-left" ng-click="save()">
+								<i class="icon fa fa-floppy-o fa-lg"></i> Guardar
+							</button>
+							<!-- <button class="button button-balanced button-nowrap icon-left" ng-click="print()">
+								Imprimir
+							</button> -->
+							<!-- <button class="button button-positive button-nowrap icon-left" ng-click="cancel()">
+								<i class="icon fa fa-floppy-o fa-lg"></i> Regresar
+							</button> -->
+							<button class="button button-assertive button-nowrap icon-left" ng-click="eliminar()">
+								Eliminar
+							</button>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="x-card">
+					<div class="x-row">
+						<div class="x-col large-12 medium-4 small-12">
+							<h2>Comprador</h2>
+
+							<div class="field">
+								<label>Nombre</label>
+								{{d.enc.com_nombres}} {{d.enc.com_apellidos}}
+							</div>
+							<div class="field">
+								<label>Dirección</label>
+								{{d.enc.com_direccion}}
+							</div>
+							<div class="field">
+								<label>Ciudad</label>
+								{{d.enc.com_ciudad}}
+							</div>
+							<div class="field">
+								<label>Telefonos</label>
+								{{d.enc.com_telefono_fijo}} - {{d.enc.com_telefono_celular}}
+							</div>
+							<div class="field">
+								<label>Correo Electrónico</label>
+								{{d.enc.com_correo_electronico}}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="x-card">
+					<div class="x-row">
+						<div class="x-col large-12 medium-4 small-12">
+							<h2><i class="shipping icon"></i> Destinatario</h2>
+
+							<div class="field">
+								<label>Nombre</label>
+								{{d.enc.ent_nombres}} {{d.enc.ent_apellidos}}
+							</div>
+							<div class="field">
+								<label>Dirección</label>
+								{{d.enc.ent_direccion}}
+							</div>
+							<div class="field">
+								<label>Ciudad</label>
+								{{d.enc.ent_ciudad}}
+							</div>
+							<div class="field">
+								<label>Telefono Fijo</label>
+								{{d.enc.ent_telefono}}
+							</div>
+							<div class="field">
+								<label>Telefono Celular</label>
+								{{d.enc.ent_telefono_celular}}
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="x-col large-4">
+				<div class="x-card">
+					<div class="x-row">
+						<div class="x-col large-12">
+							<h3 >Productos</h3>
+						</div>
+					</div>
+					<div class="x-row" ng-repeat="r in d.det">
+							<div class="x-col large-12">
+								<div class="image">
+									<img src="{{r.imagen}}" style="width:100%;max-width:200px;">
+								</div>
+								<br/>
+								<div class="content">
+									<div class="header" style="font-size: 18px">{{r.descripcion}}</div><br/>
+									<div class="meta">
+										<span style="font-weight: bold">Color: </span><span class="price">{{r.color}}</span><br/>
+										<span style="font-weight: bold">Talla: </span><span class="price" style="text-transform: uppercase;">{{r.talla}}</span><br/>
+										<span style="font-weight: bold">Unds: </span><span class="stay">{{r.unidades}}</span><br/>
+										<span style="font-weight: bold">Precio Und: </span><span class="price">${{r.precio_fmt}}</span><br/>
+										<span style="font-weight: bold">Subtotal: </span><span class="stay">${{r.subtotal_fmt}}</span><br/>
+										<span style="font-weight: bold">Precio USD: </span><span class="price">${{r.precio_usd_fmt}}</span>
+									</div>
+									<div class="description">
+										<p></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<br/>
+
+
+	</ion-content>
+</ion-view>

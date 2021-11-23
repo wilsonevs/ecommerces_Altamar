@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'HelveticaWorld-Regular';
+	_src: url("public/paginas/fuentes/HelveticaWorld-Regular.ttf"); /* IE 5-8 */
+	src:local('☺'),
+		url("public/paginas/fuentes/HelveticaWorld-Regular.ttf") format('truetype'), /* Opera, Safari */
+}
+
+@font-face {
+	font-family: 'HelveticaWorld-Bold';
+	_src: url("public/paginas/fuentes/HelveticaWorld-Bold.ttf"); /* IE 5-8 */
+	src:local('☺'),
+		url("public/paginas/fuentes/HelveticaWorld-Bold.ttf") format('truetype'), /* Opera, Safari */
+}
+
+* {
+	font-family: 'HelveticaWorld-Regular';
+	font-size:16px;
+}
+
+p {margin: 0;padding: 0;}

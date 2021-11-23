@@ -1,0 +1,83 @@
+<ion-view view-title="crm">
+	<ion-content>
+		<div class="x-card">
+			<div class="x-row">
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Usuario</span>
+						<input type="text" placeholder="" ng-model="dr.login">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Contraseña</span>
+						<input type="password" placeholder="" ng-model="dr.password">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label item-select">
+						<span class="input-label">Tipo</span>
+						<select ng-model="dr.user_type" ng-options="r.label for r in ers.user_types track by r.data">
+						</select>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.user_name">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Correo Electrónico</span>
+						<input type="text" placeholder="" ng-model="dr.email">
+					</div>
+				</div>
+			</div>
+
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Grupos</span>
+						<cm-tokenfield
+							ng-model="dr.group_ids"
+							multiple="true"
+							placeholder="Seleccione"
+							items-method="acGroups(query)"
+							items-load="true"
+						 ></cm-tokenfield>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</div>
+				</div>
+
+			</div>
+			<br/>
+
+			<div class="x-row">
+
+				<div class="x-col large-3 medium-4 small-12">
+					<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="save()">
+						<i class="icon fa fa-floppy-o fa-lg"></i>
+						Guardar
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-negative button-nowrap icon-left" ng-click="cancel()">
+						<i class="icon ion-arrow-return-left" aria-hidden="true"></i>
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

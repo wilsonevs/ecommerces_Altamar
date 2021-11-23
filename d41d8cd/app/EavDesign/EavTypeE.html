@@ -1,0 +1,159 @@
+<ion-view view-title="crm" class="EavTypeE">
+
+	<ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-checkmark-round" ng-click="saveAndBack()"></button>
+		<button class="button button-icon button-clear ion-refresh" ng-click="refresh()"></button>
+	</ion-nav-buttons>
+
+	<ion-content overflow-scroll="true">
+
+
+		<!--ion-list show-delete="data.showDelete" on-delete="onItemDelete(item)" can-reorder="true" show-reorder="true" option-buttons="[]">
+			<ion-item ng-repeat="item in items" item="item">
+				Item {{ item.id }}
+			</ion-item>
+		</ion-list-->
+
+
+
+		<div class="x-card .x-form">
+			<div class="x-row">
+				<div class="x-col small-12 medium-6 large-6">
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.type_name">
+					</label>
+
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Atributos para Slug</span>
+						<input type="text" placeholder="" ng-model="dr.slug_attrs">
+					</label>
+
+					<label class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</label>
+				</div>
+				<div class="x-col small-12 medium-6 large-6">
+					<div class="x-row">
+						<div class="x-col large-12">
+							<h5>Atributos</h5>
+						</div>
+						<!--div class="x-col large-4 text-right">
+							<a href="" class="icon ion-plus-circled" style="font-size:24px;"></a>
+						</div-->
+					</div>
+					<br/>
+
+					<div class="item-input x-attr-filter x-searchbar">
+						<label class="item-input-wrapper">
+							<i class="icon ion-search placeholder-icon"></i>
+							<input type="search" placeholder="Filtrar Atributos" ng-model="d.attr_filter" ng-change="attrFilter(true,'search')" />
+						</label>
+						<i class="icon ion-backspace-outline x-clear" ng-click="d.attr_filter='';"></i>
+					</div>
+
+					<div class="x-row">
+						<div class="x-col large-12 text-right">
+							<a ng-click="attrAdd(null,-1)" style="font-size:20px;">
+								Nuevo Atributo <i class="icon ion-plus-circled" style="font-size:24px;"></i>
+							</a>
+						</div>
+					</div>
+
+
+					<div class="x-row">
+
+
+
+						<div ui-tree="tree_options" ng-show="dr.attrs.length > 0" style="">
+							<ol ui-tree-nodes ng-model="dr.attrs">
+								<li ng-repeat="node in dr.attrs" ui-tree-node ng-include="'EavTypeEAttrTpl.html'" ng-show="attrFilter(node)"></li>
+							</ol>
+						</div>
+
+					</div>
+
+					<br/>
+
+
+				</div>
+
+			</div>
+			<br/>
+
+
+			<div class="x-footer">
+				<div class="x-row" >
+					<div class="x-col large-3 medium-4 small-12 end">
+						<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="saveAndBack()">
+							Guardar y Volver
+						</button>
+					</div>
+					<div class="x-col large-3 medium-4 small-12 end">
+						<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="save()">
+							Guardar
+						</button>
+					</div>
+					<div class="x-col large-3 medium-4 small-12 end">
+						<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="back()">
+							Regresar
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<br/>
+
+
+	</ion-content>
+
+
+	<script type="text/ng-template" id="EavTypeEAttrTpl.html">
+		<div ui-tree-handle class="tree-node tree-node-content">
+			<div class="x-row x-row-full">
+				<div class="x-col large-12 medium-12 small-12">
+					<a ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)" class="icon" ng-class="{'ion-chevron-right': collapsed,'ion-chevron-down': !collapsed}" style="float:left;font-size:24px;width:24px;">
+					</a>
+
+					<div class="float-left">
+						<a href="" data-nodrag ng-click="attrEdit(this)">{{node.attr_label}}</a>
+						<br/>
+						<p>{{node.attr_name}}</p>
+						<p>{{node.attr_type}}</p>
+					</div>
+
+
+					<!--h4>{{node.attr_label}}<h4>
+					<p>{{node.attr_name}}</p>
+					<p>{{node.attr_type}}</p-->
+
+					<div class="float-right text-right" _style="border:1px solid red;">
+						<a class="" data-nodrag ng-click="attrEdit(this)">
+							<i class="icon ion-edit" style="font-size:24px;"></i>
+						</a>
+						&nbsp;
+						<a class="" data-nodrag ng-click="attrRemove(this)">
+							<i class="icon ion-minus-circled" style="font-size:24px;"></i>
+						</a>
+						&nbsp;
+						<a class="" data-nodrag ng-click="attrAdd(this,$index)" style="margin-right: 8px;">
+							<i class="icon ion-plus-circled" style="font-size:24px;"></i>
+						</a>
+						&nbsp;
+						<a class="" style="cursor:move;">
+							<i class="icon ion-drag" style="font-size:20px;"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+			<li ng-repeat="node in node.nodes" ui-tree-node ng-include="'EavTypeEAttrTpl.html'">
+			</li>
+		</ol>
+	</script>
+</ion-view>

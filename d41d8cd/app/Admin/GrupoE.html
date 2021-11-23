@@ -1,0 +1,42 @@
+<ion-view view-title="crm">
+	<ion-content>
+		<div class="x-card">
+			<div class="x-row">
+
+				<div class="x-col small-12 medium-6 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.group_name">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</div>
+				</div>
+
+			</div>
+			<br/>
+
+			<div class="x-row">
+				<div class="x-col large-3 medium-4 small-12">
+					<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="save()">
+						<i class="icon fa fa-floppy-o fa-lg"></i>
+						Guardar
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-negative button-nowrap icon-left" ng-click="cancel()">
+						<i class="icon ion-arrow-return-left" aria-hidden="true"></i>
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

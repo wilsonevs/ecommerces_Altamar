@@ -1,0 +1,30 @@
+@import '__init__';
+
+.perfil_historico_compra{
+	.content{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		hr {
+			margin-top: 5px;
+			margin-bottom: 1rem;
+		}
+
+		.items{
+			border-bottom: 1px solid #DDDDDD;
+			margin-bottom: 1rem;
+
+			.estado {
+				background-color: $gris;
+				padding: 3px;
+
+				span {
+					text-transform: capitalize;
+				}
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+    }
+}

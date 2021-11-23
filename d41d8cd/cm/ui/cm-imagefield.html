@@ -1,0 +1,40 @@
+<div class="cm-imagefield-input" style="border:0px solid red;max-width:320px;">
+	<div class="card">
+		<div class="item item-divider">
+			<div class="row">
+				<div class="col">
+					<button class="button button-small icon-left ion-android-upload" data-id="{{inputId}}" onclick="document.getElementById(this.getAttribute('data-id')).click();">Cargar</button>
+				</div>
+				<div class="col">
+					<button class="button button-small icon-left ion-android-download" ng-click="download()" ng-if="value.rsid != 0">Descargar</button>
+				</div>
+				<div class="col">
+					<button class="button button-small icon-left ion-trash-a" ng-click="remove()" ng-if="value.rsid != 0 || value.tmp_name != ''">Eliminar</button>
+				</div>
+			</div>
+		</div>
+		<div class="item item-text-wrap">
+			<div style="width:100%;min-height:200px;max-height:200px;">
+				<img ng-src="{{d.preview}}" width="100%" style="max-height:200px;"/>
+			</div>
+			<br/>
+			<div style="width:100%;">
+				<div style="width:{{d.progress}}%;height:4px;background-color:#3E7EE8;"></div>
+			</div>
+			<p style="display:inline-block;width:95%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{value.rsname}}</p>
+
+		</div>
+		<div class="item item-divider">
+			<p ng-if="value">{{d.visible_rssize}} {{value.rstype}}</p>
+
+			<!--span ng-file-select="onFileSelect($files)" class="btn btn-primary btn-lg" role="button" id="fileSelect">Upload employee list</span-->
+		</div>
+	</div>
+
+	<div style="display:none;">
+		<input type="file" id="{{inputId}}"
+		onchange="angular.element(this).scope().onFileSelect(this.files)"
+		accept="image/x-png, image/gif, image/jpeg"
+		/>
+	</div>
+</div>

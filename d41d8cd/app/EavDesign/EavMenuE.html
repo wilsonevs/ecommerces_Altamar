@@ -1,0 +1,107 @@
+<ion-view view-title="crm" class="EavDesign_EavMenuE">
+	<ion-content>
+		<div class="x-card">
+			<div class="x-row">
+				<div class="x-col small-12 medium-6 large-6">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.category_name">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-6">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Ruta</span>
+						<input type="text" placeholder="" ng-model="dr.slug">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Tipo</span>
+						<cm-tokenfield
+							ng-model="dr.type_id"
+							multiple="false"
+							placeholder="Seleccione"
+							items-method="acTypes(query)"
+							items-load="true"
+							xxxitems-template="'sd-items-empresas.html'"
+						 ></cm-tokenfield>
+					</div>
+				</div>
+				<!--div class="x-col small-12 medium-6 large-12">
+					<div class="item item-input item-stacked-label item-select">
+						<span class="input-label">Ordenable</span>
+						<select ng-model="dr.target" ng-options="r.label for r in ers.targets track by r.data">
+						</select>
+					</div>
+				</div-->
+				<div class="x-col small-12 medium-6 large-8">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Url</span>
+						<input type="text" placeholder="" ng-model="dr.url">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label item-select">
+						<span class="input-label">Abrir en:</span>
+						<select ng-model="dr.target" ng-options="r.label for r in ers.targets track by r.data">
+						</select>
+					</div>
+				</div>
+
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">On Click:</span>
+						<input type="text" placeholder="" ng-model="dr.events.onclick">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">On Mouse Over:</span>
+						<input type="text" placeholder="" ng-model="dr.events.onmouseover">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">On Mouse Out:</span>
+						<input type="text" placeholder="" ng-model="dr.events.onmouseout">
+					</div>
+				</div>
+
+
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Exportación Personalizada</span>
+						<input type="text" placeholder="" ng-model="dr.custom_export">
+					</div>
+				</div>
+			</div>
+
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</div>
+				</div>
+
+			</div>
+			<br/>
+
+			<div class="x-row">
+				<div class="x-col large-12 horizontal-divivder" style="border-top:1px solid #ddd;"></div>
+				<div class="x-col large-3 medium-4 small-12">
+					<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="save()">
+						<i class="icon fa fa-floppy-o fa-lg"></i>
+						Guardar
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-negative button-nowrap icon-left" ng-click="cancel()">
+						<i class="icon ion-arrow-return-left" aria-hidden="true"></i>
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

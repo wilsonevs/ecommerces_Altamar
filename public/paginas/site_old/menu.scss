@@ -1,0 +1,109 @@
+.menu{
+  .menu{
+    // flecha de menu
+    .is-dropdown-submenu-parent{
+      a{
+        padding: 0.7rem 1rem !important;
+      }
+      a::after{
+        border: 0 !important;
+      }
+      a::before {
+        position: absolute;
+        // content: url('../img/flecha-menu.png');
+        content: '';
+        top: 13px;
+        right: 0px;
+      }
+    }
+
+    // flecha menu negra
+    .first-sub{
+      a::before {
+        position: absolute;
+        content: '';
+        top: 13px;
+        right: 16px;
+      }
+    }
+
+    // menu activo
+    .is-active {
+      a{
+        color: $blanco;
+      }
+    }
+
+    li{
+
+      //niveles del menu
+      .submenu {
+        min-width: 260px;
+        background-color: #fff !important;
+        border-radius: 4px;
+        // segundo nivel
+        li {
+          a {
+            padding: 13px 16px !important;
+            width: 100%;
+            margin: 0px;
+            color: $negro;
+            font-family: $font-bold;
+            &:hover{
+              background-color: rgba(0,0,0,0.1);
+            }
+          }
+          &:after{
+            display: none !important;
+          }
+
+        }
+        // tercer nivel
+        .submenu li a::before {
+          content: '';
+        }
+
+      }
+    }
+
+  }
+
+  /* Effect 3: bottom line slides/fades in */
+  .menu-animacion li{
+    padding: 8px 10px;
+    position: relative;
+    a{
+      color: $blanco;
+      font-family: $font-bold;
+    }
+
+    .is-dropdown-submenu-item{
+      padding: 0px;
+    }
+  }
+
+  .menu-animacion li::after {
+    position: absolute !important;
+    top: 45px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 4px !important;
+    background: rgba(255,255,255,0.7) !important;
+    content: '' !important;
+    opacity: 0 !important;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s !important;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s !important;
+    transition: opacity 0.3s, transform 0.3s !important;
+    -webkit-transform: translateY(10px) !important;
+    -moz-transform: translateY(10px) !important;
+    transform: translateY(10px) !important;
+  }
+
+  .menu-animacion li:hover::after,
+  .menu-animacion li:focus::after {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0px) !important;
+    -moz-transform: translateY(0px) !important;
+    transform: translateY(0px) !important;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="cm-tokenfield">
+	<div class="xarrow-down button-add" ng-click="openSearchDialog()">
+		<i class="icon ion-search"></i>
+	</div>
+
+	<div class="selected-items" ng-click="itemsContainerClick($event)" ng-if="value.length > 0">
+		<div ng-repeat="r in value" class="item">
+			{{r.label}}
+			<i class="icon ion-close-round" ng-click="removeItem($index)"></i>
+		</div>
+	</div>
+
+	<div ng-if="value.length == 0" class="placeholder" ng-click="openSearchDialog($event)" >
+		{{placeholder}}
+	</div>
+
+</div>

@@ -1,0 +1,35 @@
+.EavTypeE {
+	.x-attr-filter {
+		//border:1px solid red;
+		margin-left:-10px;
+		margin-right:-10px;
+		padding:0px;
+		margin-bottom:10px;
+	}
+
+	.x-atributos {
+
+	}
+
+	.angular-ui-tree {
+		li {
+			.h4 {
+				margin-top:0;
+			}
+
+			.x-row {
+				//border:1px solid red;
+				margin:0px;
+			}
+			.x-col {
+				padding-left:0px;
+				padding-right: 0px;
+			}
+		}
+
+		p {
+			color:#aaa;
+			margin-bottom:0px;
+		}
+	}
+}

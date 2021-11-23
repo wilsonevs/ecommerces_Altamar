@@ -1,0 +1,146 @@
+
+
+* {
+    font-size:14px;
+    font-weight: normal;
+    text-align: left;
+	font-family:Verdana;
+}
+
+table td,th {
+    padding:3px;
+}
+
+a {
+    color:black;
+    /*text-decoration: none;*/
+    font-size:14px;
+}
+
+a[href="#string"], a[href="#float"], a[href="#integer"] {
+	text-decoration:none;
+}
+
+.main {
+    min-width:900px;
+	max-width:90%;
+    margin:0 auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.intro {
+    font-size:14px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+
+.method {
+    width:100%;
+    border:1px solid gray;
+	padding:10px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	
+}
+.method caption {
+    font-size:24px;
+    font-weight: bold;
+}
+
+.method .param-label {
+    width:40px;
+    color:blue;
+}
+
+.method .param-name {
+    width:200px;
+    font-weight: bold;
+}
+
+
+.method .return-label {
+    width:40px;
+    color:red;
+}
+
+.method .return-name {
+    font-weight: bold;
+}
+
+
+.method-doc {
+    border-top:1px solid gray;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+
+.datatype {
+    width:100%;
+    border-top:1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	
+}
+
+.datatype caption {
+    font-size:24px;
+    font-weight: bold;
+}
+
+
+.column-title {
+    _background-color: #1e90ff;
+	background-color:black;
+    color:white;
+    font-weight: bold;
+	font-size:1.4rem;
+}
+.prop-name-title {
+    width:200px;
+    padding:3px;
+    border-bottom: 1px solid gray;
+}
+
+.prop-name {
+    padding:3px;
+    vertical-align: top;
+    border-bottom: 1px solid gray;
+}
+
+.prop-type-title {
+    width:200px;
+    padding:3px;
+    border-left:1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.prop-type {
+    padding:3px;
+    vertical-align: top;
+    border-left:1px solid gray;
+    border-bottom: 1px solid gray;
+
+}
+.prop-doc-title {
+    padding:3px;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.prop-doc {
+    padding:3px;
+    vertical-align: top;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+}

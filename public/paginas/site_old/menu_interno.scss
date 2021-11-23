@@ -1,0 +1,47 @@
+.menu_interno {
+    .menu {
+        margin-left: 0px;
+        margin-bottom: 1rem;
+        list-style: none;
+        li{
+            margin-bottom: 8px;
+
+            a{
+                border-left: 10px solid $gris;
+                padding: 8px 0;
+                padding-left: 10px;
+                color: $negro;
+                &:hover{
+                    font-weight: bold;
+                    color: $gris;
+                }
+
+                img {
+                    margin-right: 10px;
+                    margin-top: -5px;
+                }
+            }
+        }
+        .cerrar-sesion {
+            a {
+                color: $gris;
+                font-weight: bold;
+                text-decoration: underline;
+                border-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        background-color: $blanco;
+        padding: 30px 1rem 1px 1rem;
+        margin-top: 1rem;
+
+        .menu {
+            .cerrar-sesion {
+                margin-top: 0px;
+            }
+        }
+    }
+}

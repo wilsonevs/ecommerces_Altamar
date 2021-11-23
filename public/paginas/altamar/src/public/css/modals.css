@@ -1,0 +1,39 @@
+.reveal {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+@media screen and (max-width: 39.9375em){
+	.reveal {
+		position: relative;
+		width: 315px;
+		margin: auto;
+		height: 30vh;
+    	min-height: 30vh;
+		border-radius: 5px;
+	}
+}
+
+.reveal > .title {
+	color: gray;
+	text-align: center;
+}
+
+.reveal > .message {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.reveal > .btn {
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
+.btn > .button{
+	padding: 0.85em 7em;
+	border-radius: 4px;
+	margin-bottom: 0;
+	color: #FFFFFF;	
+	background-color: #243a6f;
+}

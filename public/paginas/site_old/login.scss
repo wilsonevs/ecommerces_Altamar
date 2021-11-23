@@ -1,0 +1,82 @@
+@import '__init__';
+
+.login{
+	.content{
+		.centro {
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+
+			hr {
+				margin-top: 5px;
+				margin-bottom: 1rem;
+				border-color: $primary;
+			}
+
+			.login {
+				margin: auto;
+
+				.logo {
+					margin-bottom: 16px;
+				}
+
+
+				form {
+					.large-10 {
+						width: 430px;
+					}
+
+					label{
+						font-weight: bold;
+						text-align: left;
+					}
+
+					.submit {
+						margin-top: 16px;
+						margin-bottom: 16px;
+						width: 50%;
+						border-radius: 4px;
+						background-color: $primary;
+						color: $blanco;
+						font-weight: bold;
+						font-size: 1rem;
+						padding: 0.7em 1em;
+					}
+
+					.cuenta{
+						float: left;
+					}
+
+					.recuperar {
+						float: right;
+					}
+
+					.boton-centro {
+						float: none;
+					}
+
+					@media screen and (max-width: 430px) {
+						.large-10 {
+							width: 100%;
+						}
+					}
+
+					@media screen and (max-width: 399px) {
+						.cuenta {
+							float: none;
+							margin-bottom: 16px;
+						}
+
+						.recuperar {
+							float: none;
+						}
+
+						.submit {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

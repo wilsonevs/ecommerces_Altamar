@@ -1,0 +1,29 @@
+<ion-view view-title="crm" class="Importacion_Importacion">
+	<ion-content>
+		<div class="x-row">
+			<div class="x-col small-12 medium-6">
+				<div class="">
+					<cm-filefield placeholder="Seleccione" ng-model="dr.archivo" placeholder="Seleccione"></cm-filefield>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="x-row">
+			<div class="x-col small-12">
+				<p class="nota_importacion">
+					Nota:<br/>
+					El excel de la importación debe ser en formato XLSX
+				</p>
+			</div>
+		</div>
+		<br/>
+		<div class="x-row">
+			<div class="x-col large-3 medium-4 small-12">
+				<button class="button button-hexpand button-positive button-nowrap" ng-click="save()">
+					Guardar
+				</button>
+			</div>
+		</div>
+		<br/>
+	</ion-content>
+</ion-view>

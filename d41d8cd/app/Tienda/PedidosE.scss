@@ -1,0 +1,24 @@
+.Tienda_PedidosE {
+
+
+	.encabezado {
+		font-size: 12px;
+		label {
+			display: inline-block;
+		}
+	}
+	label {
+		display: block;
+		font-weight: bold;
+		margin-top: 8px;
+	}
+
+
+}
+
+@media print {
+	.no-print,
+	.no-print * {
+		display: none !important;
+	}
+}

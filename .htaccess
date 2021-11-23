@@ -1,0 +1,18 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^mundoshop.com.co$
+#RewriteRule (.*) http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{REQUEST_URI} imagenes\/rs-([0-9]+)-(.+)
+RewriteRule ^imagenes\/rs-([0-9]+)-(.+)$ imagenes/imagen.php?imagenid=154 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ public/index.php [QSA,L]
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT

@@ -1,0 +1,98 @@
+.item_producto {
+	.card {
+		position: relative;
+		border: 0px;
+		// .anadir-carro {
+		// 	position: absolute;
+		// 	background-color: rgba(0, 0, 0, 1);
+		// 	color: $blanco;
+		// 	width: 100%;
+		// 	text-align: center;
+		// 	padding: 8px;
+		// 	bottom: 0;
+		// 	display: none;
+		//
+		// 	.icon-carrito {
+		// 		margin-top: -6px;
+		// 	}
+		// }
+
+		.descuento{
+			padding: 5px 12px;
+			position: absolute;
+			z-index: 1;
+			background-color: rgba(75, 170, 240, 0.5);
+			color: #ffffff;
+			font-weight: bold;
+			right: 0;
+			font-size: 1.3rem;
+		}
+
+		.border {
+			border: 1px solid #E3E3E3;
+		}
+		.card-divider {
+			background-color: #F2F2F2;
+		}
+		.card-color {
+			padding-top: 0px;
+			padding-bottom: 8px;
+			.colores {
+				color: #616363;
+			}
+			hr {
+				margin-top: 5px;
+				border-top: 1px solid #F2F2F2;
+			}
+		}
+		.card-section {
+			position: relative;
+			padding: 8px 0px;
+
+			.icon-amp {
+				position: absolute;
+				bottom: 25px;
+				right: 10px;
+				display: none;
+			}
+			.categoria {
+				color: $gris;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		// .card-section:last-child {
+		// 	border-bottom: 1px solid #F2F2F2;
+		// }
+	}
+	.card:hover {
+		// color: inherit;
+		// .anadir-carro {
+		// 	display: block;
+		// }
+		// -webkit-box-shadow: 0px 0px 50px -23px rgba(0,0,0,0.6);
+		// -moz-box-shadow: 0px 0px 50px -23px rgba(0,0,0,0.6);
+		// box-shadow: 0px 0px 50px -23px rgba(0,0,0,0.6);
+		.card-section{
+			.icon-amp {
+				display: block;
+			}
+		}
+	}
+
+
+	@media screen and (max-width: 640px){
+		.card {
+			.anadir-carro {
+				display: block;
+				font-size: 0.8rem;
+			}
+			.card-section{
+				.icon-amp {
+					display: block;
+				}
+			}
+		}
+	}
+}

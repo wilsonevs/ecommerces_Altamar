@@ -1,0 +1,33 @@
+@import "foundation-emails/css/foundation.scss";
+@import "header.scss";
+@import "footer.scss";
+
+html{
+    background-color: #FFFFFF;
+}
+.row{
+    // padding-left: 54px;
+    // padding-right: 54px;
+}
+*{
+    font-family: "Arial" !important;
+}
+.columns{
+    padding-bottom: 0px !important;
+}
+
+
+.banner {
+    // background-image: url('rs/banner-pedido.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // min-height: 120px;
+    .banner{
+      padding: 0px !important;
+      margin: 0px !important;
+      .logo {
+          margin: 0px !important;
+      }
+    }
+}

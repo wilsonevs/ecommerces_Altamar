@@ -1,0 +1,97 @@
+.footer{
+	width: 100%;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	padding-top: 1rem;
+	.logo-footer{
+		margin-bottom: 5px;
+	}
+	.clientes{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	.menu{
+		margin-bottom: 1rem;
+		li{
+
+			a{
+				color: #4A4A4A;
+				font-size: 0.9rem;
+				padding: 0.6rem 1rem;
+			}
+			.logo-footer {
+				padding-top: 0.84rem;
+			}
+		}
+		@media screen and (max-width: 1023px){
+			li{
+				a{
+					padding: 0.6rem 0;
+				}
+			}
+		}
+	}
+	.cambia-idioma{
+		.idioma{
+			margin-top: 0px;
+			margin-bottom: 0px;
+			width: 80px;
+			border: 0px;
+			padding: 0px;
+			background-color: transparent;
+			background-image: url('img/icon-idioma-negro.png');
+			background-size: 15px;
+			background-position: 63px 14px;
+		}
+	}
+
+	.suscribirse{
+		margin-top: 10px;
+
+		.input-group{
+			.input-group-button{
+				.button{
+					background-color: $gris;
+				}
+			}
+			@media screen and (max-width: 1023px){
+				.input-group-field{
+					font-size: 0.8rem;
+				}
+				.input-group-button{
+					.button{
+						padding-bottom: 0px;
+					    font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+	.redes{
+		img{
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+	}
+	.info{
+		margin-bottom: 10px;
+		hr{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			border-color: $primary;
+		}
+	}
+	.creditos{
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: $primary;
+		p {
+			margin-bottom: 0px !important;
+		}
+	}
+	.pd-right-none{
+		@media screen and (max-width: 1023px){
+			padding-left: 0px;
+		}
+	}
+}

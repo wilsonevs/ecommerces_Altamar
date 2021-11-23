@@ -1,0 +1,248 @@
+{% include 'header.html' %}
+
+<table class="spacer">
+                    <tbody>
+                        <tr>
+                            <td height="40px" style="font-size:40px;line-height:40px;">&#xA0;</td>
+                        </tr>
+                    </tbody>
+                </table>
+<table align="center" class="container">
+    <tbody>
+        <tr>
+            <td>
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="columns first last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="text-center xnombre">
+                                                {{attrs.nombres.data[0]}} {{attrs.apellidos.data[0]}}
+                                            </p>
+                                            <p class="text-center xgracias">
+                                                Gracias por registrarte en <a href="{{host}}">{{host}}</a>
+                                            </p>
+                                        </th>
+                                        <th class="expander"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="spacer">
+                    <tbody>
+                        <tr>
+                            <td height="40px" style="font-size:40px;line-height:40px;">&#xA0;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="columns first last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xtitulo">
+                                                Datos del usuario
+                                            </p>
+                                        </th>
+                                        <th class="expander"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Nombre:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.nombres.data[0]}} {{attrs.apellidos.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Identificación:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.identificacion.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Correo Electrónico:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.correo_electronico.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Dirección:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.direccion.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Teléfono Fijo:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.telefono_fijo.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Teléfono Celular:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.telefono_celular.data[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="row">
+                    <tbody>
+                        <tr>
+                            <th class="small-5 large-4 columns first">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p class="xlabel">Ciudad:</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                            <th class="small-7 large-8 columns last">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <p>{{attrs.ciudad.label[0]}}</p>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="spacer">
+    <tbody>
+        <tr>
+            <td height="50px" style="font-size:50px;line-height:50px;">&#xA0;</td>
+        </tr>
+    </tbody>
+</table>
+{% include 'footer.html' %}

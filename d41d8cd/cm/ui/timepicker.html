@@ -1,0 +1,174 @@
+<div class="cm-timepicker">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+			<div class="col hour-container">
+				<a ng-click="changeStage('hour')">{{_h}}</a><a>:</a><a ng-click="changeStage('minutes')">{{_m}}</a>
+			</div>
+			<div class="col ap-container">
+				<a class="ap" ng-click="changeAp('AM')" ng-class="{selected: _ap=='AM'}">AM</a><br/><a class="ap" ng-click="changeAp('PM')" ng-class="{selected: _ap=='PM'}">PM</a>
+			</div>
+		</div>
+		<br/>
+
+		<div class="clock">
+			<ul class="digits hours" ng-if="stage == 'hour'">
+				<li ng-repeat="r in [1,2,3,4,5,6,7,8,9,10,11,12]" ng-click="selectHour(r)" ng-class="{selected: _h==r}">{{r}}</li>
+				<li class="dot"></li>
+			</ul>
+			<ul class="digits minutes" ng-if="stage == 'minutes'">
+				<li ng-repeat="r in ['05','10','15','20','25','30','35','40','45','50','55','00']" ng-click="selectMinutes(r)" ng-class="{selected: _m==r}">{{r}}</li>
+				<li class="dot">&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+
+	<style>
+		.cm-timepicker {
+			font-size:10px;
+			background-color: white;
+		}
+		.cm-timepicker .container {
+			text-align: center;
+			padding-top: 1em;
+			padding-bottom: 2em;
+			font-size:10px;
+		}
+
+		.cm-timepicker .hour-container {
+			font-size: 3em;
+			_border:1px solid red;
+		}
+
+		.cm-timepicker .ap-container {
+			text-align: right;
+			font-size:3em;
+			padding:0px;
+			_border:1px solid red;
+		}
+
+		.cm-timepicker .ap-container .ap {
+			font-size:1em;
+			line-height: 0.9em;
+			display: inline-block;
+			padding:0px;
+			margin:0px;
+		}
+
+		.cm-timepicker .ap.selected {
+			_color:red;
+			background-color: #ccc;
+			border-radius: 4px;
+
+		}
+
+		.clock {
+			display: block;
+			border: 0px solid black;
+			width: 20em;
+			height: 20em;
+			position: relative;
+			left: 50%;
+			margin-left: -10em;
+			margin-top:-1em;
+		}
+
+		.digits {
+			border: 0px solid red;
+			width: 20em;
+			height: 20em;
+			border-radius: 15em;
+			position: absolute;
+		}
+
+		.digits li {
+			font-size: 2em;
+			display: block;
+			width: 2em;
+			height: 2em;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			line-height: 2em;
+			text-align: center;
+			margin: -1em 0 0 -1em;
+			font-weight: bold;
+		}
+
+		.digits li:nth-child(1) {
+			transform: translate(2.5em, -4.2em)
+		}
+
+		.digits li:nth-child(2) {
+			transform: translate(4.2em, -2.5em)
+		}
+
+		.digits li:nth-child(3) {
+			transform: translate(5em, 0)
+		}
+
+		.digits li:nth-child(4) {
+			transform: translate(4.2em, 2.5em)
+		}
+
+		.digits li:nth-child(5) {
+			transform: translate(2.5em, 4.2em)
+		}
+
+		.digits li:nth-child(6) {
+			transform: translate(0, 5em)
+		}
+
+		.digits li:nth-child(7) {
+			transform: translate(-2.5em, 4.2em)
+		}
+
+		.digits li:nth-child(8) {
+			transform: translate(-4.2em, 2.5em)
+		}
+
+		.digits li:nth-child(9) {
+			transform: translate(-5em, 0)
+		}
+
+		.digits li:nth-child(10) {
+			transform: translate(-4.2em, -2.5em)
+		}
+
+		.digits li:nth-child(11) {
+			transform: translate(-2.5em, -4.2em)
+		}
+
+		.digits li:nth-child(12) {
+			transform: translate(0, -5em)
+		}
+
+		.digits  .dot {
+			width:0.6em;
+			height: 0.6em;
+			border-radius: 0.3em;
+			background-color: #ccc;
+			transform: translate(0.8em, 0.8em)
+
+		}
+
+		.clock .selected {
+			background-color: #ccc;
+			border-radius: 0.9em;
+		}
+
+		.hours-line {
+			position: absolute;
+			background: #000;
+			height: 10em;
+			left: 10em;
+			top: 10em;
+			transform-origin: 100% 100%;
+			width: 2px;
+		}
+	</style>
+
+
+</div>

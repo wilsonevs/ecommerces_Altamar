@@ -1,0 +1,79 @@
+
+.filtros_catalogo{
+
+  .accordion {
+    .accordion-title {
+      border: 0px;
+      padding: 0.5rem 0rem;
+      margin-bottom: 10px;
+    }
+    .accordion-title:hover, .accordion-title:focus {
+      background: none;
+    }
+    .accordion-title::before {
+      content: '';
+    }
+
+    .accordion-content {
+      padding: 0px;
+      border: 0px;
+      margin-bottom: 1rem;
+    }
+
+    .icon-filtro {
+      position: absolute;
+      right: 0px;
+      top: 8px;
+      width: 20px;
+    }
+  }
+
+  .categoria {
+    color: $primary;
+    border-bottom: 3px solid $primary !important;
+    margin-top: -14px;
+    @media screen and (max-width: 1023px){
+      font-size: 18px !important;
+    }
+  }
+
+  .scroll {
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+  .primary {
+    color: $primary !important;
+  }
+
+  .marcas {
+    margin-left: 0px;
+    margin-bottom: 1rem;
+    list-style: none;
+    li{
+      a{
+        padding: 8px 0;
+        color: $gris-oscuro;
+        &:hover{
+          font-weight: bold;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .form {
+    .button {
+      background-color: $primary;
+      color: $blanco;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 4px;
+    }
+  }
+}

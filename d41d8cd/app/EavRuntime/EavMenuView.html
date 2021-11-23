@@ -1,0 +1,81 @@
+<ion-view view-title="crm" class="EavMenuView">
+
+
+
+	<ion-nav-buttons side="right">
+
+		<button class="button button-icon button-clear ion-arrow-down-b" ng-click="expandAll()"></button>
+		<button class="button button-icon button-clear ion-arrow-up-b" ng-click="collapseAll()"></button>
+
+		<button class="button button-icon button-clear _ion-arrow-move" ng-click="d.reorder = !d.reorder">
+			<i class="fa fa-sort" aria-hidden="true"></i>
+		</button>
+		<button class="button button-icon button-clear ion-refresh" ng-click="refresh()"></button>
+	</ion-nav-buttons>
+
+
+	<div class="bar bar-subheader item-input-inset x-searchbar">
+		<label class="item-input-wrapper">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="Buscar" ng-model="d.filter" ng-change="itemFilter(true,'search')"/>
+		</label>
+		<i class="icon ion-backspace-outline x-clear" ng-click="d.filter='';"></i>
+
+	</div>
+	<ion-content class="has-header" overflow-scroll="true">
+
+		<br/>
+		<br/>
+		<br/>
+		<ion-nav-view name="EmbeddedContent"></ion-nav-view>
+		<div ui-tree="d.tree_options" drag-enabled="d.reorder" data-reorder="{{d.reorder}}" ng-show="d.menu.length > 0" class="x-content">
+			<ol ui-tree-nodes ng-model="d.menu">
+				<li ng-repeat="node in d.menu" data-collapsed="true" ui-tree-node ng-include="'EavRuntime_EavMenuView_Node.html'" ng-show="itemFilter(node)"></li>
+			</ol>
+		</div>
+	</ion-content>
+	<script type="text/ng-template" id="EavRuntime_EavMenuView_Node.html">
+		<div ui-tree-handle class="tree-node tree-node-content">
+			<div class="x-row" style="max-width:100%;" ng-click="viewItems(node)">
+				<div class="x-col large-12 medium-12 small-12">
+					<a ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)"
+						class="icon"
+						ng-class="{'ion-chevron-right': collapsed,'ion-chevron-down': !collapsed}"
+						style="float:left;font-size:24px;width:24px;">
+					</a>
+					&nbsp;
+					<span style="cursor:pointer;">{{node.category_name}}<span style="opacity:0.2;margin-left:20px;">{{node.category_id}}</span></span>
+
+
+					<div class="float-right text-right">
+
+						&nbsp;
+						<a class=""  data-nodrag ng-if="node.type_id=='-2'">
+							<i class="icon ion-edit" style="font-size:20px;"></i>
+						</a>
+
+						&nbsp;
+						<a class="" data-nodrag  ng-if="node.type_id > 0">
+							<i class="icon ion-search" style="font-size:24px;"></i>
+						</a>
+
+						&nbsp;
+						<a class="" ng-if="d.reorder" style="cursor:move;">
+							<i class="icon ion-drag" style="font-size:20px;"></i>
+						</a>
+
+						<!--a class="" data-nodrag ng-click="newItem(node)" style="margin-right: 8px;">
+							<i class="icon ion-plus-circled" style="font-size:24px;"></i>
+						</a-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+			<li ng-repeat="node in node.nodes" ui-tree-node ng-include="'EavRuntime_EavMenuView_Node.html'" ng-show="itemFilter(node)">
+			</li>
+		</ol>
+	</script>
+
+</ion-view>

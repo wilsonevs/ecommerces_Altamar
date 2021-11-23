@@ -1,0 +1,24 @@
+@import '__init__';
+
+.pedido_finalizado{
+	.content{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		.pedido-header{
+			border-bottom: 2px solid $primary;
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+		}
+	
+		.titulo{
+			font-size: 1.5rem;
+			color: $primary;
+			font-weight: bold;
+			margin-bottom: 0px;
+		}
+		.web{
+			color: $gris;
+		}
+    }
+}

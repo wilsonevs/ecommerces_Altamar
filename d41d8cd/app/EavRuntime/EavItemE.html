@@ -1,0 +1,80 @@
+<ion-view view-title="crm" class="EavRuntime_EavItemE">
+
+	<!--ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-checkmark-round" ng-click="saveAndBack()"></button>
+		<button class="button button-icon button-clear ion-refresh" ng-click="refresh()"></button>
+	</ion-nav-buttons-->
+
+	<div class="bar bar-subheader">
+		<div class="x-row x-centered-actions">
+			<div class="x-col large-12 medium-12 small-12 text-center">
+
+				<button class="button button-small button-positive button-nowrap" ng-click="saveAndBack()">
+					<i class="fa fa-floppy-o" aria-hidden="true"></i>
+					<i class="fa fa-plus" aria-hidden="true"></i>
+					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				</button>
+				<button class="button button-small button-positive button-nowrap" ng-click="save()">
+					<i class="fa fa-floppy-o" aria-hidden="true"></i>
+				</button>
+
+				<button class="button button-small button-positive button-nowrap" ng-click="saveAndContinue()">
+					<i class="fa fa-floppy-o" aria-hidden="true"></i>
+					<i class="fa fa-plus" aria-hidden="true"></i>
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				</button>
+
+				<button class="button button-small button-assertive button-nowrap" ng-click="remove()" ng-if="ers.eav.item.item_id">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</button>
+
+				<button class="button button-small button-energized button-nowrap" ng-click="duplicate()" ng-if="ers.eav.item.item_id">
+					<i class="fa fa-files-o" aria-hidden="true"></i>
+				</button>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<ion-content class="has-header has-subheader">
+
+
+		<div class="x-card" ng-show="ers.eav">
+
+			<div class="x-content">
+				<cm-eav-form eav="ers.eav" api="d.eav_api" ng-mode="dr"></cm-eav-form>
+			</div>
+			<br/>
+
+			<!--div class="x-footer">
+				<div class="x-row">
+					<div class="x-col large-3 medium-3 small-12 end">
+						<button class="button button-small button-hexpand button-positive button-nowrap icon-left ion-record" ng-click="saveAndBack()">
+							Guardar y Volver
+						</button>
+					</div>
+					<div class="x-col large-3 medium-3 small-12 end">
+						<button class="button button-small button-hexpand button-positive button-nowrap icon-left ion-record" ng-click="save()">
+							Guardar
+						</button>
+					</div>
+					<div class="x-col large-3 medium-3 small-12">
+						<button class="button button-small button-hexpand button-positive button-nowrap icon-left ion-record" ng-click="saveAndContinue()">
+							Guardar y Continuar
+						</button>
+					</div>
+					<div class="x-col large-3 medium-3 small-12 end">
+						<button class="button button-small button-hexpand button-positive button-nowrap icon-left ion-arrow-return-left" ng-click="cancel()">
+							Regresar
+						</button>
+					</div>
+				</div-->
+			</div>
+		</div>
+		<br/>
+
+	</ion-content>
+</ion-view>

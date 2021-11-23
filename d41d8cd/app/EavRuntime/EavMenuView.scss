@@ -1,0 +1,9 @@
+
+.EavMenuView {
+
+	//cursor normal cuando no estoy reordenando
+	.angular-ui-tree[data-reorder=false] .angular-ui-tree-handle {
+		cursor: auto !important;
+	}
+
+}

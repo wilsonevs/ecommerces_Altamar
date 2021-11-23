@@ -1,0 +1,153 @@
+<ion-view view-title="crm" animation="no-animation">
+<!--ion-modal-view style="width: 100% !important;height: 100%;top: 0 !important;left: 0 !important;" _style="width:90%;top:5%;left:5%;right:5%;bottom:5%;min-height: initial !important;"-->
+
+	<!--ion-header-bar align-title="left" class="bar-positive">
+		<h1 class="title">Edición de Atributo</h1>
+	</ion-header-bar-->
+
+	<ion-content>
+
+
+		<div class="x-card">
+			<div class="x-row">
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Etiqueta</span>
+						<input type="text" placeholder="" ng-model="dr.attr_label">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-4">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="" ng-model="dr.attr_name">
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-select item-stacked-label">
+						<span class="input-label">En Consulta</span>
+						<select ng-model="dr.attr_vfield" ng-options="r.label for r in ers.view_fields track by r.data">
+						</select>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Posición</span>
+						<input type="text" placeholder="Número" ng-model="dr.attr_vorder">
+					</div>
+				</div>
+
+			</div>
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-8">
+					<div class="item item-input item-select item-stacked-label">
+						<span class="input-label">Tipo</span>
+						<select ng-model="dr.attr_type" ng-options="r.label for r in ers.attr_types track by r.data"></select>
+					</div>
+				</div>
+
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-select item-stacked-label">
+						<span class="input-label">Ancho</span>
+						<select ng-model="dr.attr_ewidth" ng-options="r.label for r in ers.column_withs track by r.data">
+						</select>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Alto</span>
+						<input type="text" placeholder="" ng-model="dr.attr_eheight">
+					</div>
+				</div>
+			</div>
+
+			<br/>
+			<br/>
+			<div class="x-row">
+				<div class="x-col large-12 text-center">
+					<h4>Fuente de Datos</h4>
+				</div>
+				<br/>
+
+
+
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-select item-stacked-label">
+						<span class="input-label">Tipo</span>
+					<select ng-model="dr.ds_type" ng-options="r.label for r in ers.ds_types track by r.data">						</select>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-6 large-2">
+					<div class="item item-input item-select item-stacked-label">
+						<span class="input-label">Multiple</span>
+						<select ng-model="dr.ds_multiple" ng-options="r.label for r in ers.ds_multiple track by r.data">
+						</select>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-12 large-8">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Fuente de Datos</span>
+						<cm-tokenfield
+							ng-model="dr.rel_type_id"
+							multiple="false"
+							placeholder="Seleccione"
+							items-method="acTypes(query)"
+							items-load="true"
+						 ></cm-tokenfield>
+					</div>
+				</div>
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">Etiqueta de la Fuente de Datos</span>
+						<cm-tokenfield
+							ng-model="dr.rel_attr_ids"
+							multiple="true"
+							placeholder="Seleccione"
+							items-method="acRelAttrs(query)"
+							items-load="true"
+						 ></cm-tokenfield>
+					</div>
+				</div>
+			</div>
+
+			<div class="x-row">
+				<div class="x-col large-12">
+					<div class="item item-input item-stacked-label">
+						<span class="input-label">
+							Fuente de Datos Estatica del Atributo ( Separador ; )
+						</span>
+						<textarea style="min-height:200px;" ng-model="dr.ds_content"></textarea>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="x-row">
+				<div class="x-col small-12 medium-12 large-12">
+					<div class="item item-input item-stacked-label">
+						<div class="input-label">Notas</div>
+						<textarea style="min-height:200px;" ng-model="dr.notes"></textarea>
+					</div>
+				</div>
+
+			</div>
+			<br/>
+
+			<div class="x-row">
+				<div class="x-col large-12 horizontal-divivder" style="border-top:1px solid #ddd;"></div>
+				<div class="x-col large-3 medium-4 small-12">
+					<button class="button button-hexpand button-positive button-nowrap icon-left" ng-click="accept()">
+						Aceptar
+					</button>
+				</div>
+				<div class="x-col large-3 medium-4 small-12 end">
+					<button class="button button-hexpand button-negative button-nowrap icon-left" ng-click="cancel()">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+<!--/ion-modal-view-->
+</ion-view>

@@ -1,0 +1,8 @@
+<div>
+	<ion-checkbox
+		ng-repeat="r in options"
+		ng-true-value="{{r.data}}"
+		ng-false-value="null"
+		ng-model="itemStates[$index]"
+		ng-change="toggle(r)">{{r.label}}</ion-checkbox>
+</div>

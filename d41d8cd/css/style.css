@@ -1,0 +1,133 @@
+/* Empty. Add your own CSS if you like */
+
+.input-label {
+	color:#888;
+	_font-weight: bold;
+}
+
+.item.item-input {
+	border-top:none;
+	border-left:none;
+	border-right: none;
+	border-bottom:1px solid #cccccc;
+}
+
+.item.item-input:hover {
+	border-bottom: 1px solid #000000;
+}
+
+
+
+.item.item-select > .input-label{
+	display:block;
+	width:100%;
+}
+.item.item-select > select {
+	display:block;
+	width:100%;
+	padding-top:12px;
+	padding-bottom: 9px;
+}
+
+.item-select:after {
+	top:70%;
+}
+
+
+
+/* menu */
+/*
+.menu-left .bar.bar-header {
+	background-color: black;
+}
+.menu-left .bar.bar-header h1 {
+	color:#A6A6A7;
+}
+
+.menu-left, .menu-left .item {
+	background-color: #32333C;
+}
+
+
+.menu.menu-left .item.item-divider {
+	color:#9F9FA0;
+
+	margin-top:20px;
+	border-top:0px;
+	border-bottom:1px solid #9F9FA0;
+	margin-bottom: 10px;
+	padding-left:12px;
+}
+
+.menu.menu-left a.item {
+	border:none;
+	color:#9F9FA0;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-left:24px;
+}
+*/
+
+
+
+/*
+.item-input .cm-tokenfield {
+	border:1px solid transparent;
+	min-height: 34px;
+}
+
+.item-input .cm-tokenfield .selected-items {
+	padding-top:0px;
+
+}
+
+.item-input .cm-tokenfield .placeholder {
+	padding-top:10px;
+}
+*/
+
+
+
+/*
+.item.item-select {
+	font-size:14px;
+	line-height: 16px;
+	color:#111;
+	margin-top:30px;
+}
+
+.item.item-select > .input-label {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    max-width: 200px;
+    width: 35%;
+    color: #aaa;
+    font-size: 14px;
+}
+*/
+
+
+.x-content {
+	margin:0px;
+	padding:10px;
+}
+
+.x-card {
+	margin-top: 10px;
+	/* margin-left:10px;
+	margin-right:10px; */
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+	padding:10px;
+}
+
+.x-card .x-row {
+	margin:0px !important;
+}
+
+.x-card .x-footer {
+	background-color:#F5F6F7;
+	margin-left:-10px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+	padding:10px;
+}

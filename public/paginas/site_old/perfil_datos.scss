@@ -1,0 +1,31 @@
+@import '__init__';
+
+.perfil_datos{
+	.content{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		hr {
+			margin-top: 5px;
+			margin-bottom: 1rem;
+			border-color: $gris;
+		}
+
+		form {
+			.submit {
+				margin-top: 16px;
+				margin-bottom: 16px;
+				width: 400px;
+				border-radius: 4px;
+				background-color: $primary;
+				color: $blanco;
+				font-weight: bold;
+				font-size: 1rem;
+				padding: 0.7em 1em;
+				@media screen and (max-width: 430px){
+					width: 100% !importants;
+				}
+			}
+		}
+	}
+}

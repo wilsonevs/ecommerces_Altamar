@@ -1,0 +1,58 @@
+.cm-tokenfield > .button-add {
+	position: relative;
+	top: 0px;
+	left: 100%;
+	margin-left: -25px;
+	margin-top: -22px;
+	opacity: 0.6;
+}
+
+.cm-tokenfield .button-add:hover {
+	opacity: 1;
+}
+
+.cm-tokenfield .arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #999;
+}
+
+.cm-tokenfield .selected-items {
+	padding-top:0px;
+}
+
+.cm-tokenfield .selected-items > div {
+	display:block;
+	margin-top:4px;
+	padding-left:5px;
+	padding-top:4px;
+	padding-bottom:4px;
+	border:1px solid #ccc;
+}
+
+.cm-tokenfield .selected-items .item {
+	padding-right: 8px;
+}
+
+.cm-tokenfield .selected-items > div > i {
+	float:right;
+	margin-top:-4px;
+	opacity: 0.6;
+}
+
+.cm-tokenfield .selected-items .item i:hover {
+	opacity: 1;
+}
+
+.cm-tokenfield .item {
+	margin-right: 2px;
+	border-radius: 4px;
+}
+
+.cm-tokenfield .placeholder {
+	color: #ccc;
+	padding-top:8px;
+	padding-bottom:4px;
+}

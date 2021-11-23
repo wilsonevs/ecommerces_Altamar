@@ -1,0 +1,110 @@
+@import '__init__';
+
+.item_amp{
+	.content{
+		margin-top: 2rem;
+
+		#gallery{
+			position: relative;
+			.descuento{
+				padding: 8px 16px;
+				position: absolute;
+				z-index: 1;
+				background-color: rgba(75, 170, 240, 0.5);
+				color: #ffffff;
+				font-weight: bold;
+				right: 0;
+				font-size: 1.6rem;
+			}
+			.gallery{
+				padding: 0px;
+				#thumbs,#thumbs-small {
+					padding-top: 15px;
+					padding-bottom: 15px;
+					padding-left: 25px;
+					padding-right: 25px;
+					overflow: hidden;
+					.imagenes{
+						padding: 5px;
+					}
+					@media screen and (max-width: 640px){
+						padding: 0px;
+					}
+				}
+				#thumbs .imagenes img, #thumbs-small .imagenes img, #largeImage {
+					cursor: pointer;
+					width: 100%;
+
+					border: 1px solid #c4c4c4;
+				}
+
+				#panel {
+					#imagen-amp{
+						position: relative;
+						#largeImage {
+							width: 100%;
+						}
+						.owl-buttons{
+							position: absolute;
+							bottom: 45%;
+							width: 100%;
+							.owl-prev{
+								background: transparent;
+								float: left;
+								margin-left: 20px;
+							}
+							.owl-next{
+								background: transparent;
+								float: right;
+								margin-right: 20px;
+							}
+						}
+						@media screen and (max-width: 640px){
+							.owl-buttons{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		.title{
+			position: relative;
+			&::before{
+				position: absolute;
+		    display: inline-block;
+		    content: '';
+		    width: 40px;
+		    height: 2px;
+		    left: 0;
+		    bottom: 0;
+		    background: $primary;
+			}
+		}
+
+
+		.descripcion{
+			border-bottom: 1px solid $primary;
+			margin-bottom: 7px;
+			h1{
+				font-weight: bold;
+				font-size: 1.2rem;
+				color: $primary;
+			}
+		}
+
+		.button {
+			width: 100%;
+			background-color: $primary;
+			padding: 7px 10px;
+		}
+
+		.input-group-label{
+			background-color: transparent;
+			padding: 0 6px;
+		}
+
+  }
+}

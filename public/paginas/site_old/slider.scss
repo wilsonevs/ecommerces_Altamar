@@ -1,0 +1,23 @@
+#slider .item img{
+    width: 100%;
+}
+
+#slider {
+  .owl-prev {
+    position: absolute;
+    left: 10px;
+    top: 43%;
+  }
+  .owl-next {
+    position: absolute;
+    right: 10px;
+    top: 43%;
+  }
+}
+
+// .part_video{
+// 	width: 100%;
+// 	img{
+// 		width: 100%;
+// 	}
+// }

@@ -1,0 +1,30 @@
+@import '__init__';
+
+.contactenos {
+    .content {
+        padding-top: 1rem;
+
+        hr {
+            margin-top: 5px;
+            margin-bottom: 1rem;
+            border-color: $primary;
+        }
+
+        .contacto{
+            .button {
+                margin-top: 16px;
+                margin-bottom: 16px;
+                border-radius: 4px;
+                background-color: $primary;
+                color: $blanco;
+                font-weight: bold;
+                font-size: 1rem;
+                padding: 0.7em 2em;
+            }
+        }
+
+        iframe {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+
+.cm-searchdialog .x-search-subheader {
+	i {
+		font-size:20px;
+	}
+
+	.x-clear {
+		position:absolute;
+		font-size:20px;
+		z-index: 10000;
+		right:14px;
+	}
+
+	&.item-input-inset {
+		padding-left:4px;
+		padding-right:4px;
+	}
+}

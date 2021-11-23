@@ -1,0 +1,59 @@
+<ion-view view-title="crm" class="PedidosL">
+
+
+	<ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-refresh" ng-click="aplicarFiltros(true,'refresh');"></button>
+		<button class="button button-icon button-clear ion-plus-round" ng-click="nuevo();"></button>
+	</ion-nav-buttons>
+
+
+	<div class="bar bar-subheader item-input-inset x-search-subheader">
+		<label class="item-input-wrapper">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="Buscar" ng-model="dr.filter" ng-change="aplicarFiltros(true,'search')" />
+		</label>
+		<i class="icon ion-backspace-outline x-clear" ng-click="dr.filter=''; aplicarFiltros(true,'search');"></i>
+	</div>
+
+
+	<ion-content class="has-header">
+		<br/>
+		<br/>
+
+		<ion-refresher on-refresh="aplicarFiltros(true,'pull')" pulling-text="Refrescar" refreshing-text="Refrescando!" refreshing-icon="ion-loading-c">
+		</ion-refresher>
+
+		<div class="list list-icons">
+
+			<a ng-repeat="r in page.rows" class="item item-icon item-icon-left item-icon-right" ng-click="editar(r)">
+
+				<i class="icon fa fa-user" aria-hidden="true"></i> {{r.com_nombres}} {{r.com_apellidos}}
+				<p class="float-right">
+					Pedido: {{r.id_pedido}}<br/>
+					Estado: {{r.estado}}
+				</p>
+
+				<p>{{r.com_correo_electronico}}</p>
+				<p>Fecha Pedido: {{r.fechahora}}</p>
+
+				<p>Forma Pago: {{r.nombre_forma_pago}}</p>
+				<p>Fecha Pago: {{r.fechahora_pago}}</p>
+				<p>Total: {{r.total_fmt}}, Unds: {{r.total_unidades}}</p>
+				<p>Total USD: {{r.total_usd_fmt}}, Unds: {{r.total_unidades}}</p>
+
+
+
+				<!--span class="badge badge-assertive">0</span-->
+				<!--i class="icon ion-chevron-right"></i-->
+			</a>
+		</div>
+
+		<div ng-if="page.last && page.rows.length==0" class="text-center">
+			No se encontraron datos
+		</div>
+
+		<ion-infinite-scroll ng-if="!page.last" on-infinite="aplicarFiltros(false,'scroll')" class="infinite-scroll">
+		</ion-infinite-scroll>
+
+	</ion-content>
+</ion-view>

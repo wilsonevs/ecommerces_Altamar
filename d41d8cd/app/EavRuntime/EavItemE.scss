@@ -1,0 +1,23 @@
+.EavRuntime_EavItemE {
+
+	.bar.bar-subheader {
+		background-image: none;
+
+		.x-centered-actions {
+			padding-left: 20px;
+			padding-right: 20px;
+
+
+			i {
+				font-size:1rem;
+			}
+
+			button {
+				min-width:100px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+
+	}
+}

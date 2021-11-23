@@ -1,0 +1,79 @@
+@import '__init__';
+
+.pago{
+	.content{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		hr {
+			margin-top: 5px;
+			margin-bottom: 1rem;
+			border-color: $primary;
+		}
+
+		.margin-top-2 {
+			margin-top: 2rem;
+		}
+
+		form {
+			.button {
+				margin-top: 16px;
+				margin-bottom: 16px;
+				width: 215px;
+				border-radius: 4px;
+				background-color: $primary;
+				color: $blanco;
+				font-weight: bold;
+				font-size: 1rem;
+				padding: 0.7em 1em;
+			}
+		}
+
+		.valores{
+			.label-subtotal{
+				font-size: 20px;
+			}
+			.label-total{
+				font-size: 20px;
+			}
+			.content-subtotal{
+				font-size: 18px;
+			}
+			.content-total{
+				font-size: 20px;
+			}
+			// .label-impuesto{
+			// 	font-size: 20px;
+			// }
+
+			@media screen and (max-width: 640px){
+				.label-subtotal{
+					font-size: 1.5rem;
+				}
+				.label-total{
+					font-size: 1.7rem;
+				}
+				.content-subtotal{
+					font-size: 1.5rem;
+				}
+				.content-total{
+					font-size: 1.7rem;
+				}
+				// .label-impuesto{
+				// 	font-size: 14px;
+				// }
+			}
+
+		}
+
+		.detalle-entrega {
+			margin-top: 11px;
+		}
+
+		.small-centered{
+			@media screen and (max-width: 640px){
+				text-align: center!important;
+			}
+		}
+	}
+}

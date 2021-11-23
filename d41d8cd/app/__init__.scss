@@ -1,0 +1,41 @@
+* {
+	font-family: "Lato", sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Lato", sans-serif;
+	color: #000;
+	font-weight: 500;
+	//font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+	//font-family: "Lato", sans-serif;
+	line-height: 1.2;
+}
+
+input, button, select, textarea {
+	font-family: "Lato", sans-serif;
+}
+
+a{
+	cursor: pointer;
+}
+
+
+
+.button-nowrap {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow:hidden;
+}
+
+.button-hexpand {
+	width:100%;
+}
+
+
+.item-icon-top.item-icon-left, item-icon-top.item-icon-right {
+	i {
+		top:11px;
+		height:auto;
+	}
+}

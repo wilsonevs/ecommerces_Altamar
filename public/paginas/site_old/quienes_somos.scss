@@ -1,0 +1,17 @@
+@import '__init__';
+
+.quienes_somos{
+	.content{
+		hr {
+            margin-top: 5px;
+            margin-bottom: 1rem;
+            border-color: $primary;
+        }
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+
+        img{
+            width: 100% !important;
+        }
+    }
+}

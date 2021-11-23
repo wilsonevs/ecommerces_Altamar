@@ -1,0 +1,69 @@
+<ion-modal-view>
+	<!--ion-nav-title>
+      {{title}} &nbsp; <img src="img/icon-header-contactos.png" alt="">
+  </ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-plus-round" ng-click="nuevo();"></button>
+	</ion-nav-buttons-->
+
+
+	<ion-header-bar align-title="left" class="bar-positive">
+		<div class="buttons">
+			<button class="button" ng-click="close()">Cancelar</button>
+		</div>
+		<h1 class="title">Seleccione:</h1>
+		<div class="buttons">
+			<button class="button" ng-click="done()">Listo</button>
+		</div>
+	</ion-header-bar>
+
+	<div class="bar bar-subheader item-input-inset x-search-subheader">
+		<label class="item-input-wrapper">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="Buscar" ng-model="viewModel.query" ng-change="__scheduleSearch()" ng-trim="true" />
+		</label>
+		<i class="icon ion-backspace-outline x-clear" ng-click="clearSearchInput()"></i>
+		<!--button class="button button-clear">Ver Todo</button-->
+	</div>
+
+	<ion-content>
+		<!--div class="bar bar-header item-input-inset">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios-search placeholder-icon" ng-if="viewModel.search"></i>
+				<input type="search" placeholder="Buscar" ng-model="viewModel.query" ng-change="__scheduleSearch()" ng-trim="true" ng-if="viewModel.search">
+			</label>
+			<button class="button button-clear" ng-click="close()" ng-if="!viewModel.multiple">Cancelar</button>
+			<button class="button button-clear" ng-click="done()" ng-if="viewModel.multiple">Listo</button>
+		</div-->
+
+		<ion-refresher on-refresh="applyFilters(true,'Pull')" pulling-text="Refrescar" refreshing-text="Refrescando!" refreshing-icon="ion-loading-c">
+		</ion-refresher>
+
+
+		<div class="list">
+			<div class="item item-divider">
+				Opciones
+			</div>
+
+			<a class="item item-icon-right" ng-repeat="r in items" ng-click="selectItem(r)">
+				<div ng-if="!itemsTemplate">{{r.label}}</div>
+				<div ng-if="itemsTemplate" ng-include="itemsTemplate"></div>
+				<i class="icon ion-checkmark-round" ng-if="isSelected(r)"></i>
+			</a>
+		</div>
+
+		<div ng-if="page.last && items.length==0" class="text-center">
+			No se encontraron datos
+		</div>
+
+		<div ng-if="items.length==50" class="text-center">Se presentaron las primeras 50 coincidencias, use el cuadro de busqueda para refinar los resultados</div>
+
+		<ion-infinite-scroll ng-if="!page.last" disabled-on-infinite="aplicarFiltros(false,'scroll')" class="infinite-scroll">
+		</ion-infinite-scroll>
+
+	</ion-content>
+	<!--ion-footer-bar keyboard-attach class="button-primary bar-positive" ng-click="__scheduleSearch()">
+		<div class="title icon-left">Ver Todo</div>
+	</ion-footer-bar-->
+
+</ion-modal-view>
